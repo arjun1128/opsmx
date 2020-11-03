@@ -1,0 +1,4383 @@
+[
+ {
+  "application": "application-spinnaker",
+  "authentication": {
+   "allowedAccounts": [
+    "dockerhub",
+    "default"
+   ],
+   "user": "anonymous"
+  },
+  "buildTime": 1604386960248,
+  "canceled": true,
+  "canceledBy": "anonymous",
+  "endTime": 1604386964403,
+  "id": "01EP6EMCTMPMEVP0MXSDE89PXG",
+  "initialConfig": {},
+  "keepWaitingPipelines": false,
+  "limitConcurrent": true,
+  "name": "samplepipeline",
+  "notifications": [],
+  "origin": "api",
+  "pipelineConfigId": "db9c6b72-1ff0-4bd7-a638-3a0239bc16a7",
+  "spelEvaluator": "v4",
+  "stages": [
+   {
+    "context": {
+     "failPipeline": true,
+     "judgmentInputs": [],
+     "judgmentStatus": "",
+     "notifications": []
+    },
+    "endTime": 1604386964345,
+    "id": "01EP6EMCVRGABWB7WNBJHWVBW3",
+    "name": "Manual Judgment",
+    "outputs": {},
+    "refId": "1",
+    "requisiteStageRefIds": [],
+    "startTime": 1604386960316,
+    "status": "CANCELED",
+    "tasks": [
+     {
+      "endTime": 1604386964335,
+      "id": "1",
+      "implementingClass": "com.netflix.spinnaker.orca.echo.pipeline.ManualJudgmentStage.WaitForManualJudgmentTask",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "waitForJudgment",
+      "stageEnd": true,
+      "stageStart": true,
+      "startTime": 1604386960374,
+      "status": "CANCELED"
+     }
+    ],
+    "type": "manualJudgment"
+   }
+  ],
+  "startTime": 1604386960265,
+  "status": "CANCELED",
+  "systemNotifications": [],
+  "trigger": {
+   "artifacts": [],
+   "dryRun": false,
+   "enabled": false,
+   "eventId": "d3142eb2-81e3-48df-a011-7555f5d1eca1",
+   "executionId": "01EP6EMCTMPMEVP0MXSDE89PXG",
+   "expectedArtifacts": [],
+   "notifications": [],
+   "parameters": {},
+   "rebake": false,
+   "resolvedExpectedArtifacts": [],
+   "strategy": false,
+   "type": "manual",
+   "user": "[anonymous]"
+  },
+  "type": "PIPELINE"
+ }
+]
+[
+ {
+  "application": "test",
+  "authentication": {
+   "allowedAccounts": []
+  },
+  "buildTime": 1604403720030,
+  "canceled": false,
+  "endTime": 1604403941399,
+  "id": "01EP6YKVTY32JFM4GXVH3JTBH1",
+  "initialConfig": {},
+  "keepWaitingPipelines": true,
+  "limitConcurrent": true,
+  "name": "test",
+  "notifications": [],
+  "origin": "unknown",
+  "pipelineConfigId": "70ad51c7-2c5b-41c5-b1e9-63caa17ce0ae",
+  "spelEvaluator": "v4",
+  "stages": [
+   {
+    "context": {
+     "account": "default",
+     "alias": "runJob",
+     "application": "test",
+     "artifacts": [
+      {
+       "customKind": false,
+       "location": "default",
+       "metadata": {
+        "account": "default"
+       },
+       "name": "fetch-3fd56ffe972cc646",
+       "reference": "fetch-3fd56ffe972cc646",
+       "type": "kubernetes/job"
+      }
+     ],
+     "cloudProvider": "kubernetes",
+     "completionDetails": {
+      "exitCode": "",
+      "message": "",
+      "reason": "",
+      "signal": ""
+     },
+     "credentials": "default",
+     "deploy.account.name": "default",
+     "deploy.jobs": {
+      "default": [
+       "job fetch-3fd56ffe972cc646"
+      ]
+     },
+     "deploy.server.groups": {},
+     "deployedManifests": [
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fd56ffe972cc646"
+      }
+     ],
+     "errors": [],
+     "jobStatus": {
+      "account": "default",
+      "completionDetails": {
+       "exitCode": "",
+       "message": "",
+       "reason": "",
+       "signal": ""
+      },
+      "createdTime": 1604403915000,
+      "jobState": "Succeeded",
+      "location": "default",
+      "name": "fetch-3fd56ffe972cc646",
+      "pods": [
+       {
+        "name": "fetch-3fd56ffe972cc646-wwnqx",
+        "status": {
+         "conditions": [
+          {
+           "lastTransitionTime": {
+            "afterNow": false,
+            "beforeNow": true,
+            "centuryOfEra": 20,
+            "chronology": {
+             "zone": {
+              "fixed": true,
+              "id": "Etc/UTC"
+             }
+            },
+            "dayOfMonth": 3,
+            "dayOfWeek": 2,
+            "dayOfYear": 308,
+            "equalNow": false,
+            "era": 1,
+            "hourOfDay": 11,
+            "millis": 1604403915000,
+            "millisOfDay": 42315000,
+            "millisOfSecond": 0,
+            "minuteOfDay": 705,
+            "minuteOfHour": 45,
+            "monthOfYear": 11,
+            "secondOfDay": 42315,
+            "secondOfMinute": 15,
+            "weekOfWeekyear": 45,
+            "weekyear": 2020,
+            "year": 2020,
+            "yearOfCentury": 20,
+            "yearOfEra": 2020,
+            "zone": {
+             "fixed": true,
+             "id": "Etc/UTC"
+            }
+           },
+           "reason": "PodCompleted",
+           "status": "True",
+           "type": "Initialized"
+          },
+          {
+           "lastTransitionTime": {
+            "afterNow": false,
+            "beforeNow": true,
+            "centuryOfEra": 20,
+            "chronology": {
+             "zone": {
+              "fixed": true,
+              "id": "Etc/UTC"
+             }
+            },
+            "dayOfMonth": 3,
+            "dayOfWeek": 2,
+            "dayOfYear": 308,
+            "equalNow": false,
+            "era": 1,
+            "hourOfDay": 11,
+            "millis": 1604403915000,
+            "millisOfDay": 42315000,
+            "millisOfSecond": 0,
+            "minuteOfDay": 705,
+            "minuteOfHour": 45,
+            "monthOfYear": 11,
+            "secondOfDay": 42315,
+            "secondOfMinute": 15,
+            "weekOfWeekyear": 45,
+            "weekyear": 2020,
+            "year": 2020,
+            "yearOfCentury": 20,
+            "yearOfEra": 2020,
+            "zone": {
+             "fixed": true,
+             "id": "Etc/UTC"
+            }
+           },
+           "reason": "PodCompleted",
+           "status": "False",
+           "type": "Ready"
+          },
+          {
+           "lastTransitionTime": {
+            "afterNow": false,
+            "beforeNow": true,
+            "centuryOfEra": 20,
+            "chronology": {
+             "zone": {
+              "fixed": true,
+              "id": "Etc/UTC"
+             }
+            },
+            "dayOfMonth": 3,
+            "dayOfWeek": 2,
+            "dayOfYear": 308,
+            "equalNow": false,
+            "era": 1,
+            "hourOfDay": 11,
+            "millis": 1604403915000,
+            "millisOfDay": 42315000,
+            "millisOfSecond": 0,
+            "minuteOfDay": 705,
+            "minuteOfHour": 45,
+            "monthOfYear": 11,
+            "secondOfDay": 42315,
+            "secondOfMinute": 15,
+            "weekOfWeekyear": 45,
+            "weekyear": 2020,
+            "year": 2020,
+            "yearOfCentury": 20,
+            "yearOfEra": 2020,
+            "zone": {
+             "fixed": true,
+             "id": "Etc/UTC"
+            }
+           },
+           "reason": "PodCompleted",
+           "status": "False",
+           "type": "ContainersReady"
+          },
+          {
+           "lastTransitionTime": {
+            "afterNow": false,
+            "beforeNow": true,
+            "centuryOfEra": 20,
+            "chronology": {
+             "zone": {
+              "fixed": true,
+              "id": "Etc/UTC"
+             }
+            },
+            "dayOfMonth": 3,
+            "dayOfWeek": 2,
+            "dayOfYear": 308,
+            "equalNow": false,
+            "era": 1,
+            "hourOfDay": 11,
+            "millis": 1604403915000,
+            "millisOfDay": 42315000,
+            "millisOfSecond": 0,
+            "minuteOfDay": 705,
+            "minuteOfHour": 45,
+            "monthOfYear": 11,
+            "secondOfDay": 42315,
+            "secondOfMinute": 15,
+            "weekOfWeekyear": 45,
+            "weekyear": 2020,
+            "year": 2020,
+            "yearOfCentury": 20,
+            "yearOfEra": 2020,
+            "zone": {
+             "fixed": true,
+             "id": "Etc/UTC"
+            }
+           },
+           "status": "True",
+           "type": "PodScheduled"
+          }
+         ],
+         "containerStatuses": [
+          {
+           "containerID": "docker://62e9c31270c9244fb63d0fcf7964da47cd72437811f1d781de97b7635c6f7b59",
+           "image": "opsmxdev/apline-with-curl:latest",
+           "imageID": "docker-pullable://opsmxdev/apline-with-curl@sha256:fa8560f749ca3ac2b797a2a24c2ae9bc76ad75b15efa3d919ca1f9d14c170d54",
+           "lastState": {},
+           "name": "fetch",
+           "ready": false,
+           "restartCount": 0,
+           "state": {
+            "terminated": {
+             "containerID": "docker://62e9c31270c9244fb63d0fcf7964da47cd72437811f1d781de97b7635c6f7b59",
+             "exitCode": 0,
+             "finishedAt": {
+              "afterNow": false,
+              "beforeNow": true,
+              "centuryOfEra": 20,
+              "chronology": {
+               "zone": {
+                "fixed": true,
+                "id": "Etc/UTC"
+               }
+              },
+              "dayOfMonth": 3,
+              "dayOfWeek": 2,
+              "dayOfYear": 308,
+              "equalNow": false,
+              "era": 1,
+              "hourOfDay": 11,
+              "millis": 1604403922000,
+              "millisOfDay": 42322000,
+              "millisOfSecond": 0,
+              "minuteOfDay": 705,
+              "minuteOfHour": 45,
+              "monthOfYear": 11,
+              "secondOfDay": 42322,
+              "secondOfMinute": 22,
+              "weekOfWeekyear": 45,
+              "weekyear": 2020,
+              "year": 2020,
+              "yearOfCentury": 20,
+              "yearOfEra": 2020,
+              "zone": {
+               "fixed": true,
+               "id": "Etc/UTC"
+              }
+             },
+             "reason": "Completed",
+             "startedAt": {
+              "afterNow": false,
+              "beforeNow": true,
+              "centuryOfEra": 20,
+              "chronology": {
+               "zone": {
+                "fixed": true,
+                "id": "Etc/UTC"
+               }
+              },
+              "dayOfMonth": 3,
+              "dayOfWeek": 2,
+              "dayOfYear": 308,
+              "equalNow": false,
+              "era": 1,
+              "hourOfDay": 11,
+              "millis": 1604403922000,
+              "millisOfDay": 42322000,
+              "millisOfSecond": 0,
+              "minuteOfDay": 705,
+              "minuteOfHour": 45,
+              "monthOfYear": 11,
+              "secondOfDay": 42322,
+              "secondOfMinute": 22,
+              "weekOfWeekyear": 45,
+              "weekyear": 2020,
+              "year": 2020,
+              "yearOfCentury": 20,
+              "yearOfEra": 2020,
+              "zone": {
+               "fixed": true,
+               "id": "Etc/UTC"
+              }
+             }
+            }
+           }
+          }
+         ],
+         "hostIP": "10.168.3.10",
+         "phase": "Succeeded",
+         "podIP": "10.244.0.15",
+         "qosClass": "BestEffort",
+         "startTime": {
+          "afterNow": false,
+          "beforeNow": true,
+          "centuryOfEra": 20,
+          "chronology": {
+           "zone": {
+            "fixed": true,
+            "id": "Etc/UTC"
+           }
+          },
+          "dayOfMonth": 3,
+          "dayOfWeek": 2,
+          "dayOfYear": 308,
+          "equalNow": false,
+          "era": 1,
+          "hourOfDay": 11,
+          "millis": 1604403915000,
+          "millisOfDay": 42315000,
+          "millisOfSecond": 0,
+          "minuteOfDay": 705,
+          "minuteOfHour": 45,
+          "monthOfYear": 11,
+          "secondOfDay": 42315,
+          "secondOfMinute": 15,
+          "weekOfWeekyear": 45,
+          "weekyear": 2020,
+          "year": 2020,
+          "yearOfCentury": 20,
+          "yearOfEra": 2020,
+          "zone": {
+           "fixed": true,
+           "id": "Etc/UTC"
+          }
+         }
+        }
+       }
+      ],
+      "provider": "kubernetes"
+     },
+     "kato.last.task.id": {
+      "id": "e3a5ac17-452b-4843-be3d-cbb869a76dc5"
+     },
+     "kato.result.expected": false,
+     "kato.task.firstNotFoundRetry": -1,
+     "kato.task.lastStatus": "SUCCEEDED",
+     "kato.task.notFoundRetryCount": 0,
+     "kato.task.terminalRetryCount": 0,
+     "kato.tasks": [
+      {
+       "history": [
+        {
+         "phase": "ORCHESTRATION",
+         "status": "Initializing Orchestration Task"
+        },
+        {
+         "phase": "ORCHESTRATION",
+         "status": "Processing op: KubernetesRunJobOperation"
+        },
+        {
+         "phase": "RUN_KUBERNETES_JOB",
+         "status": "Running Kubernetes job..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Beginning deployment of manifest..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Finding deployer for job..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Swapping out artifacts in job fetch-3fd56ffe972cc646 from context..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Checking if all requested artifacts were bound..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Sorting manifests by priority..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Deploy order is: job fetch-3fd56ffe972cc646"
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Finding deployer for job..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Annotating manifest job fetch-3fd56ffe972cc646 with artifact, relationships \u0026 moniker..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Swapping out artifacts in job fetch-3fd56ffe972cc646 from other deployments..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Submitting manifest job fetch-3fd56ffe972cc646 to kubernetes master..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Deploy manifest task completed successfully."
+        },
+        {
+         "phase": "ORCHESTRATION",
+         "status": "Orchestration completed."
+        }
+       ],
+       "id": "e3a5ac17-452b-4843-be3d-cbb869a76dc5",
+       "resultObjects": [
+        {
+         "boundArtifacts": [],
+         "createdArtifacts": [
+          {
+           "customKind": false,
+           "location": "default",
+           "metadata": {
+            "account": "default"
+           },
+           "name": "fetch-3fd56ffe972cc646",
+           "reference": "fetch-3fd56ffe972cc646",
+           "type": "kubernetes/job"
+          }
+         ],
+         "deployedNamesByLocation": {
+          "default": [
+           "job fetch-3fd56ffe972cc646"
+          ]
+         },
+         "manifestNamesByNamespace": {
+          "default": [
+           "job fetch-3fd56ffe972cc646"
+          ]
+         },
+         "manifests": [
+          {
+           "apiVersion": "batch/v1",
+           "kind": "Job",
+           "metadata": {
+            "annotations": {
+             "artifact.spinnaker.io/location": "default",
+             "artifact.spinnaker.io/name": "fetch-3fd56ffe972cc646",
+             "artifact.spinnaker.io/type": "kubernetes/job",
+             "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"batch/v1\",\"kind\":\"Job\",\"metadata\":{\"annotations\":{\"artifact.spinnaker.io/location\":\"default\",\"artifact.spinnaker.io/name\":\"fetch-3fd56ffe972cc646\",\"artifact.spinnaker.io/type\":\"kubernetes/job\",\"moniker.spinnaker.io/application\":\"test\",\"moniker.spinnaker.io/cluster\":\"job fetch-3fd56ffe972cc646\"},\"labels\":{\"app.kubernetes.io/managed-by\":\"spinnaker\",\"app.kubernetes.io/name\":\"test\",\"spinnakerlabel\":\"deljob\"},\"name\":\"fetch-3fd56ffe972cc646\",\"namespace\":\"default\"},\"spec\":{\"backoffLimit\":2,\"template\":{\"spec\":{\"containers\":[{\"args\":[\"echo \\\"mahesh\\\"\"],\"command\":[\"/bin/sh\",\"-x\",\"-c\"],\"image\":\"opsmxdev/apline-with-curl\",\"name\":\"fetch\"}],\"restartPolicy\":\"Never\"}}}}\n",
+             "moniker.spinnaker.io/application": "test",
+             "moniker.spinnaker.io/cluster": "job fetch-3fd56ffe972cc646"
+            },
+            "creationTimestamp": "2020-11-03T11:45:15Z",
+            "labels": {
+             "app.kubernetes.io/managed-by": "spinnaker",
+             "app.kubernetes.io/name": "test",
+             "spinnakerlabel": "deljob"
+            },
+            "name": "fetch-3fd56ffe972cc646",
+            "namespace": "default",
+            "resourceVersion": "112380",
+            "selfLink": "/apis/batch/v1/namespaces/default/jobs/fetch-3fd56ffe972cc646",
+            "uid": "e7bbec00-b4f2-4a06-9d3a-32189e8465a8"
+           },
+           "spec": {
+            "backoffLimit": 2,
+            "completions": 1,
+            "parallelism": 1,
+            "selector": {
+             "matchLabels": {
+              "controller-uid": "e7bbec00-b4f2-4a06-9d3a-32189e8465a8"
+             }
+            },
+            "template": {
+             "metadata": {
+              "labels": {
+               "controller-uid": "e7bbec00-b4f2-4a06-9d3a-32189e8465a8",
+               "job-name": "fetch-3fd56ffe972cc646"
+              }
+             },
+             "spec": {
+              "containers": [
+               {
+                "args": [
+                 "echo \"mahesh\""
+                ],
+                "command": [
+                 "/bin/sh",
+                 "-x",
+                 "-c"
+                ],
+                "image": "opsmxdev/apline-with-curl",
+                "imagePullPolicy": "Always",
+                "name": "fetch",
+                "resources": {},
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File"
+               }
+              ],
+              "dnsPolicy": "ClusterFirst",
+              "restartPolicy": "Never",
+              "schedulerName": "default-scheduler",
+              "securityContext": {},
+              "terminationGracePeriodSeconds": 30
+             }
+            }
+           },
+           "status": {}
+          }
+         ]
+        }
+       ],
+       "status": {
+        "completed": true,
+        "failed": false,
+        "retryable": false
+       }
+      }
+     ],
+     "manifest": {
+      "apiVersion": "batch/v1",
+      "kind": "Job",
+      "metadata": {
+       "labels": {
+        "spinnakerlabel": "deljob"
+       },
+       "name": "fetch",
+       "namespace": "default"
+      },
+      "spec": {
+       "backoffLimit": 2,
+       "template": {
+        "spec": {
+         "containers": [
+          {
+           "args": [
+            "echo \"mahesh\""
+           ],
+           "command": [
+            "/bin/sh",
+            "-x",
+            "-c"
+           ],
+           "image": "opsmxdev/apline-with-curl",
+           "name": "fetch"
+          }
+         ],
+         "restartPolicy": "Never"
+        }
+       }
+      }
+     },
+     "manifestNamesByNamespaceToRefresh": {
+      "default": [
+       "job fetch-3fd56ffe972cc646"
+      ]
+     },
+     "notification.type": "runjob",
+     "outputs.boundArtifacts": [],
+     "outputs.createdArtifacts": [
+      {
+       "customKind": false,
+       "location": "default",
+       "metadata": {
+        "account": "default"
+       },
+       "name": "fetch-3fd56ffe972cc646",
+       "reference": "fetch-3fd56ffe972cc646",
+       "type": "kubernetes/job"
+      }
+     ],
+     "outputs.manifestNamesByNamespace": {
+      "default": [
+       "job fetch-3fd56ffe972cc646"
+      ]
+     },
+     "outputs.manifests": [
+      {
+       "apiVersion": "batch/v1",
+       "kind": "Job",
+       "metadata": {
+        "annotations": {
+         "artifact.spinnaker.io/location": "default",
+         "artifact.spinnaker.io/name": "fetch-3fd56ffe972cc646",
+         "artifact.spinnaker.io/type": "kubernetes/job",
+         "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"batch/v1\",\"kind\":\"Job\",\"metadata\":{\"annotations\":{\"artifact.spinnaker.io/location\":\"default\",\"artifact.spinnaker.io/name\":\"fetch-3fd56ffe972cc646\",\"artifact.spinnaker.io/type\":\"kubernetes/job\",\"moniker.spinnaker.io/application\":\"test\",\"moniker.spinnaker.io/cluster\":\"job fetch-3fd56ffe972cc646\"},\"labels\":{\"app.kubernetes.io/managed-by\":\"spinnaker\",\"app.kubernetes.io/name\":\"test\",\"spinnakerlabel\":\"deljob\"},\"name\":\"fetch-3fd56ffe972cc646\",\"namespace\":\"default\"},\"spec\":{\"backoffLimit\":2,\"template\":{\"spec\":{\"containers\":[{\"args\":[\"echo \\\"mahesh\\\"\"],\"command\":[\"/bin/sh\",\"-x\",\"-c\"],\"image\":\"opsmxdev/apline-with-curl\",\"name\":\"fetch\"}],\"restartPolicy\":\"Never\"}}}}\n",
+         "moniker.spinnaker.io/application": "test",
+         "moniker.spinnaker.io/cluster": "job fetch-3fd56ffe972cc646"
+        },
+        "creationTimestamp": "2020-11-03T11:45:15Z",
+        "labels": {
+         "app.kubernetes.io/managed-by": "spinnaker",
+         "app.kubernetes.io/name": "test",
+         "spinnakerlabel": "deljob"
+        },
+        "name": "fetch-3fd56ffe972cc646",
+        "namespace": "default",
+        "resourceVersion": "112380",
+        "selfLink": "/apis/batch/v1/namespaces/default/jobs/fetch-3fd56ffe972cc646",
+        "uid": "e7bbec00-b4f2-4a06-9d3a-32189e8465a8"
+       },
+       "spec": {
+        "backoffLimit": 2,
+        "completions": 1,
+        "parallelism": 1,
+        "selector": {
+         "matchLabels": {
+          "controller-uid": "e7bbec00-b4f2-4a06-9d3a-32189e8465a8"
+         }
+        },
+        "template": {
+         "metadata": {
+          "labels": {
+           "controller-uid": "e7bbec00-b4f2-4a06-9d3a-32189e8465a8",
+           "job-name": "fetch-3fd56ffe972cc646"
+          }
+         },
+         "spec": {
+          "containers": [
+           {
+            "args": [
+             "echo \"mahesh\""
+            ],
+            "command": [
+             "/bin/sh",
+             "-x",
+             "-c"
+            ],
+            "image": "opsmxdev/apline-with-curl",
+            "imagePullPolicy": "Always",
+            "name": "fetch",
+            "resources": {},
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File"
+           }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "restartPolicy": "Never",
+          "schedulerName": "default-scheduler",
+          "securityContext": {},
+          "terminationGracePeriodSeconds": 30
+         }
+        }
+       },
+       "status": {}
+      }
+     ],
+     "processed.scopedManifests": [
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fd56ffe972cc646"
+      }
+     ],
+     "refreshed.scopedManifests": [
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fd56ffe972cc646"
+      }
+     ],
+     "shouldRefreshManifestNamesByNamespaceToRefresh": false,
+     "source": "text"
+    },
+    "endTime": 1604403941341,
+    "id": "01EP6YKVTYJS6ZC72JQTQQ58XX",
+    "name": "Run Job (Manifest)",
+    "outputs": {
+     "artifacts": [
+      {
+       "customKind": false,
+       "location": "default",
+       "metadata": {
+        "account": "default"
+       },
+       "name": "fetch-3fd56ffe972cc646",
+       "reference": "fetch-3fd56ffe972cc646",
+       "type": "kubernetes/job"
+      }
+     ],
+     "completionDetails": {
+      "exitCode": "",
+      "message": "",
+      "reason": "",
+      "signal": ""
+     },
+     "jobStatus": {
+      "account": "default",
+      "completionDetails": {
+       "exitCode": "",
+       "message": "",
+       "reason": "",
+       "signal": ""
+      },
+      "createdTime": 1604403915000,
+      "jobState": "Succeeded",
+      "location": "default",
+      "name": "fetch-3fd56ffe972cc646",
+      "pods": [
+       {
+        "name": "fetch-3fd56ffe972cc646-wwnqx",
+        "status": {
+         "conditions": [
+          {
+           "lastTransitionTime": {
+            "afterNow": false,
+            "beforeNow": true,
+            "centuryOfEra": 20,
+            "chronology": {
+             "zone": {
+              "fixed": true,
+              "id": "Etc/UTC"
+             }
+            },
+            "dayOfMonth": 3,
+            "dayOfWeek": 2,
+            "dayOfYear": 308,
+            "equalNow": false,
+            "era": 1,
+            "hourOfDay": 11,
+            "millis": 1604403915000,
+            "millisOfDay": 42315000,
+            "millisOfSecond": 0,
+            "minuteOfDay": 705,
+            "minuteOfHour": 45,
+            "monthOfYear": 11,
+            "secondOfDay": 42315,
+            "secondOfMinute": 15,
+            "weekOfWeekyear": 45,
+            "weekyear": 2020,
+            "year": 2020,
+            "yearOfCentury": 20,
+            "yearOfEra": 2020,
+            "zone": {
+             "fixed": true,
+             "id": "Etc/UTC"
+            }
+           },
+           "reason": "PodCompleted",
+           "status": "True",
+           "type": "Initialized"
+          },
+          {
+           "lastTransitionTime": {
+            "afterNow": false,
+            "beforeNow": true,
+            "centuryOfEra": 20,
+            "chronology": {
+             "zone": {
+              "fixed": true,
+              "id": "Etc/UTC"
+             }
+            },
+            "dayOfMonth": 3,
+            "dayOfWeek": 2,
+            "dayOfYear": 308,
+            "equalNow": false,
+            "era": 1,
+            "hourOfDay": 11,
+            "millis": 1604403915000,
+            "millisOfDay": 42315000,
+            "millisOfSecond": 0,
+            "minuteOfDay": 705,
+            "minuteOfHour": 45,
+            "monthOfYear": 11,
+            "secondOfDay": 42315,
+            "secondOfMinute": 15,
+            "weekOfWeekyear": 45,
+            "weekyear": 2020,
+            "year": 2020,
+            "yearOfCentury": 20,
+            "yearOfEra": 2020,
+            "zone": {
+             "fixed": true,
+             "id": "Etc/UTC"
+            }
+           },
+           "reason": "PodCompleted",
+           "status": "False",
+           "type": "Ready"
+          },
+          {
+           "lastTransitionTime": {
+            "afterNow": false,
+            "beforeNow": true,
+            "centuryOfEra": 20,
+            "chronology": {
+             "zone": {
+              "fixed": true,
+              "id": "Etc/UTC"
+             }
+            },
+            "dayOfMonth": 3,
+            "dayOfWeek": 2,
+            "dayOfYear": 308,
+            "equalNow": false,
+            "era": 1,
+            "hourOfDay": 11,
+            "millis": 1604403915000,
+            "millisOfDay": 42315000,
+            "millisOfSecond": 0,
+            "minuteOfDay": 705,
+            "minuteOfHour": 45,
+            "monthOfYear": 11,
+            "secondOfDay": 42315,
+            "secondOfMinute": 15,
+            "weekOfWeekyear": 45,
+            "weekyear": 2020,
+            "year": 2020,
+            "yearOfCentury": 20,
+            "yearOfEra": 2020,
+            "zone": {
+             "fixed": true,
+             "id": "Etc/UTC"
+            }
+           },
+           "reason": "PodCompleted",
+           "status": "False",
+           "type": "ContainersReady"
+          },
+          {
+           "lastTransitionTime": {
+            "afterNow": false,
+            "beforeNow": true,
+            "centuryOfEra": 20,
+            "chronology": {
+             "zone": {
+              "fixed": true,
+              "id": "Etc/UTC"
+             }
+            },
+            "dayOfMonth": 3,
+            "dayOfWeek": 2,
+            "dayOfYear": 308,
+            "equalNow": false,
+            "era": 1,
+            "hourOfDay": 11,
+            "millis": 1604403915000,
+            "millisOfDay": 42315000,
+            "millisOfSecond": 0,
+            "minuteOfDay": 705,
+            "minuteOfHour": 45,
+            "monthOfYear": 11,
+            "secondOfDay": 42315,
+            "secondOfMinute": 15,
+            "weekOfWeekyear": 45,
+            "weekyear": 2020,
+            "year": 2020,
+            "yearOfCentury": 20,
+            "yearOfEra": 2020,
+            "zone": {
+             "fixed": true,
+             "id": "Etc/UTC"
+            }
+           },
+           "status": "True",
+           "type": "PodScheduled"
+          }
+         ],
+         "containerStatuses": [
+          {
+           "containerID": "docker://62e9c31270c9244fb63d0fcf7964da47cd72437811f1d781de97b7635c6f7b59",
+           "image": "opsmxdev/apline-with-curl:latest",
+           "imageID": "docker-pullable://opsmxdev/apline-with-curl@sha256:fa8560f749ca3ac2b797a2a24c2ae9bc76ad75b15efa3d919ca1f9d14c170d54",
+           "lastState": {},
+           "name": "fetch",
+           "ready": false,
+           "restartCount": 0,
+           "state": {
+            "terminated": {
+             "containerID": "docker://62e9c31270c9244fb63d0fcf7964da47cd72437811f1d781de97b7635c6f7b59",
+             "exitCode": 0,
+             "finishedAt": {
+              "afterNow": false,
+              "beforeNow": true,
+              "centuryOfEra": 20,
+              "chronology": {
+               "zone": {
+                "fixed": true,
+                "id": "Etc/UTC"
+               }
+              },
+              "dayOfMonth": 3,
+              "dayOfWeek": 2,
+              "dayOfYear": 308,
+              "equalNow": false,
+              "era": 1,
+              "hourOfDay": 11,
+              "millis": 1604403922000,
+              "millisOfDay": 42322000,
+              "millisOfSecond": 0,
+              "minuteOfDay": 705,
+              "minuteOfHour": 45,
+              "monthOfYear": 11,
+              "secondOfDay": 42322,
+              "secondOfMinute": 22,
+              "weekOfWeekyear": 45,
+              "weekyear": 2020,
+              "year": 2020,
+              "yearOfCentury": 20,
+              "yearOfEra": 2020,
+              "zone": {
+               "fixed": true,
+               "id": "Etc/UTC"
+              }
+             },
+             "reason": "Completed",
+             "startedAt": {
+              "afterNow": false,
+              "beforeNow": true,
+              "centuryOfEra": 20,
+              "chronology": {
+               "zone": {
+                "fixed": true,
+                "id": "Etc/UTC"
+               }
+              },
+              "dayOfMonth": 3,
+              "dayOfWeek": 2,
+              "dayOfYear": 308,
+              "equalNow": false,
+              "era": 1,
+              "hourOfDay": 11,
+              "millis": 1604403922000,
+              "millisOfDay": 42322000,
+              "millisOfSecond": 0,
+              "minuteOfDay": 705,
+              "minuteOfHour": 45,
+              "monthOfYear": 11,
+              "secondOfDay": 42322,
+              "secondOfMinute": 22,
+              "weekOfWeekyear": 45,
+              "weekyear": 2020,
+              "year": 2020,
+              "yearOfCentury": 20,
+              "yearOfEra": 2020,
+              "zone": {
+               "fixed": true,
+               "id": "Etc/UTC"
+              }
+             }
+            }
+           }
+          }
+         ],
+         "hostIP": "10.168.3.10",
+         "phase": "Succeeded",
+         "podIP": "10.244.0.15",
+         "qosClass": "BestEffort",
+         "startTime": {
+          "afterNow": false,
+          "beforeNow": true,
+          "centuryOfEra": 20,
+          "chronology": {
+           "zone": {
+            "fixed": true,
+            "id": "Etc/UTC"
+           }
+          },
+          "dayOfMonth": 3,
+          "dayOfWeek": 2,
+          "dayOfYear": 308,
+          "equalNow": false,
+          "era": 1,
+          "hourOfDay": 11,
+          "millis": 1604403915000,
+          "millisOfDay": 42315000,
+          "millisOfSecond": 0,
+          "minuteOfDay": 705,
+          "minuteOfHour": 45,
+          "monthOfYear": 11,
+          "secondOfDay": 42315,
+          "secondOfMinute": 15,
+          "weekOfWeekyear": 45,
+          "weekyear": 2020,
+          "year": 2020,
+          "yearOfCentury": 20,
+          "yearOfEra": 2020,
+          "zone": {
+           "fixed": true,
+           "id": "Etc/UTC"
+          }
+         }
+        }
+       }
+      ],
+      "provider": "kubernetes"
+     },
+     "manifestNamesByNamespaceToRefresh": {
+      "default": [
+       "job fetch-3fd56ffe972cc646"
+      ]
+     },
+     "outputs.boundArtifacts": [],
+     "outputs.createdArtifacts": [
+      {
+       "customKind": false,
+       "location": "default",
+       "metadata": {
+        "account": "default"
+       },
+       "name": "fetch-3fd56ffe972cc646",
+       "reference": "fetch-3fd56ffe972cc646",
+       "type": "kubernetes/job"
+      }
+     ],
+     "outputs.manifestNamesByNamespace": {
+      "default": [
+       "job fetch-3fd56ffe972cc646"
+      ]
+     },
+     "outputs.manifests": [
+      {
+       "apiVersion": "batch/v1",
+       "kind": "Job",
+       "metadata": {
+        "annotations": {
+         "artifact.spinnaker.io/location": "default",
+         "artifact.spinnaker.io/name": "fetch-3fd56ffe972cc646",
+         "artifact.spinnaker.io/type": "kubernetes/job",
+         "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"batch/v1\",\"kind\":\"Job\",\"metadata\":{\"annotations\":{\"artifact.spinnaker.io/location\":\"default\",\"artifact.spinnaker.io/name\":\"fetch-3fd56ffe972cc646\",\"artifact.spinnaker.io/type\":\"kubernetes/job\",\"moniker.spinnaker.io/application\":\"test\",\"moniker.spinnaker.io/cluster\":\"job fetch-3fd56ffe972cc646\"},\"labels\":{\"app.kubernetes.io/managed-by\":\"spinnaker\",\"app.kubernetes.io/name\":\"test\",\"spinnakerlabel\":\"deljob\"},\"name\":\"fetch-3fd56ffe972cc646\",\"namespace\":\"default\"},\"spec\":{\"backoffLimit\":2,\"template\":{\"spec\":{\"containers\":[{\"args\":[\"echo \\\"mahesh\\\"\"],\"command\":[\"/bin/sh\",\"-x\",\"-c\"],\"image\":\"opsmxdev/apline-with-curl\",\"name\":\"fetch\"}],\"restartPolicy\":\"Never\"}}}}\n",
+         "moniker.spinnaker.io/application": "test",
+         "moniker.spinnaker.io/cluster": "job fetch-3fd56ffe972cc646"
+        },
+        "creationTimestamp": "2020-11-03T11:45:15Z",
+        "labels": {
+         "app.kubernetes.io/managed-by": "spinnaker",
+         "app.kubernetes.io/name": "test",
+         "spinnakerlabel": "deljob"
+        },
+        "name": "fetch-3fd56ffe972cc646",
+        "namespace": "default",
+        "resourceVersion": "112380",
+        "selfLink": "/apis/batch/v1/namespaces/default/jobs/fetch-3fd56ffe972cc646",
+        "uid": "e7bbec00-b4f2-4a06-9d3a-32189e8465a8"
+       },
+       "spec": {
+        "backoffLimit": 2,
+        "completions": 1,
+        "parallelism": 1,
+        "selector": {
+         "matchLabels": {
+          "controller-uid": "e7bbec00-b4f2-4a06-9d3a-32189e8465a8"
+         }
+        },
+        "template": {
+         "metadata": {
+          "labels": {
+           "controller-uid": "e7bbec00-b4f2-4a06-9d3a-32189e8465a8",
+           "job-name": "fetch-3fd56ffe972cc646"
+          }
+         },
+         "spec": {
+          "containers": [
+           {
+            "args": [
+             "echo \"mahesh\""
+            ],
+            "command": [
+             "/bin/sh",
+             "-x",
+             "-c"
+            ],
+            "image": "opsmxdev/apline-with-curl",
+            "imagePullPolicy": "Always",
+            "name": "fetch",
+            "resources": {},
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File"
+           }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "restartPolicy": "Never",
+          "schedulerName": "default-scheduler",
+          "securityContext": {},
+          "terminationGracePeriodSeconds": 30
+         }
+        }
+       },
+       "status": {}
+      }
+     ],
+     "shouldRefreshManifestNamesByNamespaceToRefresh": true
+    },
+    "refId": "1",
+    "requisiteStageRefIds": [],
+    "startTime": 1604403915188,
+    "status": "SUCCEEDED",
+    "tasks": [
+     {
+      "endTime": 1604403915326,
+      "id": "1",
+      "implementingClass": "com.netflix.spinnaker.orca.clouddriver.tasks.job.RunJobTask",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "runJob",
+      "stageEnd": false,
+      "stageStart": true,
+      "startTime": 1604403915197,
+      "status": "SUCCEEDED"
+     },
+     {
+      "endTime": 1604403920532,
+      "id": "2",
+      "implementingClass": "com.netflix.spinnaker.orca.clouddriver.tasks.job.MonitorJobTask",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "monitorDeploy",
+      "stageEnd": false,
+      "stageStart": false,
+      "startTime": 1604403915374,
+      "status": "SUCCEEDED"
+     },
+     {
+      "endTime": 1604403920703,
+      "id": "3",
+      "implementingClass": "com.netflix.spinnaker.orca.clouddriver.tasks.manifest.PromoteManifestKatoOutputsTask",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "promoteOutputs",
+      "stageEnd": false,
+      "stageStart": false,
+      "startTime": 1604403920596,
+      "status": "SUCCEEDED"
+     },
+     {
+      "endTime": 1604403941079,
+      "id": "4",
+      "implementingClass": "com.netflix.spinnaker.orca.clouddriver.tasks.manifest.ManifestForceCacheRefreshTask",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "forceCacheRefresh",
+      "stageEnd": false,
+      "stageStart": false,
+      "startTime": 1604403920758,
+      "status": "SUCCEEDED"
+     },
+     {
+      "endTime": 1604403941321,
+      "id": "5",
+      "implementingClass": "com.netflix.spinnaker.orca.clouddriver.tasks.job.WaitOnJobCompletion",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "waitOnJobCompletion",
+      "stageEnd": true,
+      "stageStart": false,
+      "startTime": 1604403941088,
+      "status": "SUCCEEDED"
+     }
+    ],
+    "type": "runJobManifest"
+   }
+  ],
+  "startTime": 1604403915135,
+  "status": "SUCCEEDED",
+  "systemNotifications": [],
+  "trigger": {
+   "artifacts": [],
+   "cronExpression": "0 0/1 * 1/1 * ? *",
+   "dryRun": false,
+   "enabled": true,
+   "eventId": "5e61bdb1-60d5-4015-9466-bcdb387169fd",
+   "expectedArtifacts": [],
+   "id": "89e95b43-0966-3202-8790-786611789f4d",
+   "notifications": [],
+   "parameters": {},
+   "rebake": false,
+   "resolvedExpectedArtifacts": [],
+   "strategy": false,
+   "type": "cron",
+   "user": "[anonymous]"
+  },
+  "type": "PIPELINE"
+ }
+]
+[
+ {
+  "application": "test",
+  "authentication": {
+   "allowedAccounts": [
+    "dockerhub",
+    "default"
+   ],
+   "user": "anonymous"
+  },
+  "buildTime": 1604379144059,
+  "canceled": false,
+  "endTime": 1604379183325,
+  "id": "01EP675VD3XM33GTQXB5ERB1VG",
+  "initialConfig": {},
+  "keepWaitingPipelines": false,
+  "limitConcurrent": true,
+  "name": "smtp",
+  "notifications": [],
+  "origin": "api",
+  "pipelineConfigId": "ad00557e-e72a-4f3a-a7b8-0ca3dcb4f28f",
+  "spelEvaluator": "v4",
+  "stages": [
+   {
+    "context": {
+     "account": "default",
+     "alias": "preconfiguredJob",
+     "application": "test",
+     "artifacts": [
+      {
+       "customKind": false,
+       "location": "oes",
+       "metadata": {
+        "account": "default"
+       },
+       "name": "smtpjob-3fd6f9925ad892e6",
+       "reference": "smtpjob-3fd6f9925ad892e6",
+       "type": "kubernetes/job"
+      }
+     ],
+     "cloudProvider": "kubernetes",
+     "completionDetails": {
+      "exitCode": "",
+      "message": "",
+      "reason": "",
+      "signal": ""
+     },
+     "credentials": "default",
+     "deploy.account.name": "default",
+     "deploy.jobs": {
+      "oes": [
+       "job smtpjob-3fd6f9925ad892e6"
+      ]
+     },
+     "deploy.server.groups": {},
+     "deployedManifests": [
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job smtpjob-3fd6f9925ad892e6"
+      }
+     ],
+     "errors": [],
+     "jobStatus": {
+      "account": "default",
+      "completionDetails": {
+       "exitCode": "",
+       "message": "",
+       "reason": "",
+       "signal": ""
+      },
+      "createdTime": 1604379146000,
+      "jobState": "Succeeded",
+      "location": "oes",
+      "name": "smtpjob-3fd6f9925ad892e6",
+      "pods": [
+       {
+        "name": "smtpjob-3fd6f9925ad892e6-7r9bb",
+        "status": {
+         "conditions": [
+          {
+           "lastTransitionTime": {
+            "afterNow": false,
+            "beforeNow": true,
+            "centuryOfEra": 20,
+            "chronology": {
+             "zone": {
+              "fixed": true,
+              "id": "Etc/UTC"
+             }
+            },
+            "dayOfMonth": 3,
+            "dayOfWeek": 2,
+            "dayOfYear": 308,
+            "equalNow": false,
+            "era": 1,
+            "hourOfDay": 4,
+            "millis": 1604379146000,
+            "millisOfDay": 17546000,
+            "millisOfSecond": 0,
+            "minuteOfDay": 292,
+            "minuteOfHour": 52,
+            "monthOfYear": 11,
+            "secondOfDay": 17546,
+            "secondOfMinute": 26,
+            "weekOfWeekyear": 45,
+            "weekyear": 2020,
+            "year": 2020,
+            "yearOfCentury": 20,
+            "yearOfEra": 2020,
+            "zone": {
+             "fixed": true,
+             "id": "Etc/UTC"
+            }
+           },
+           "reason": "PodCompleted",
+           "status": "True",
+           "type": "Initialized"
+          },
+          {
+           "lastTransitionTime": {
+            "afterNow": false,
+            "beforeNow": true,
+            "centuryOfEra": 20,
+            "chronology": {
+             "zone": {
+              "fixed": true,
+              "id": "Etc/UTC"
+             }
+            },
+            "dayOfMonth": 3,
+            "dayOfWeek": 2,
+            "dayOfYear": 308,
+            "equalNow": false,
+            "era": 1,
+            "hourOfDay": 4,
+            "millis": 1604379173000,
+            "millisOfDay": 17573000,
+            "millisOfSecond": 0,
+            "minuteOfDay": 292,
+            "minuteOfHour": 52,
+            "monthOfYear": 11,
+            "secondOfDay": 17573,
+            "secondOfMinute": 53,
+            "weekOfWeekyear": 45,
+            "weekyear": 2020,
+            "year": 2020,
+            "yearOfCentury": 20,
+            "yearOfEra": 2020,
+            "zone": {
+             "fixed": true,
+             "id": "Etc/UTC"
+            }
+           },
+           "reason": "PodCompleted",
+           "status": "False",
+           "type": "Ready"
+          },
+          {
+           "lastTransitionTime": {
+            "afterNow": false,
+            "beforeNow": true,
+            "centuryOfEra": 20,
+            "chronology": {
+             "zone": {
+              "fixed": true,
+              "id": "Etc/UTC"
+             }
+            },
+            "dayOfMonth": 3,
+            "dayOfWeek": 2,
+            "dayOfYear": 308,
+            "equalNow": false,
+            "era": 1,
+            "hourOfDay": 4,
+            "millis": 1604379173000,
+            "millisOfDay": 17573000,
+            "millisOfSecond": 0,
+            "minuteOfDay": 292,
+            "minuteOfHour": 52,
+            "monthOfYear": 11,
+            "secondOfDay": 17573,
+            "secondOfMinute": 53,
+            "weekOfWeekyear": 45,
+            "weekyear": 2020,
+            "year": 2020,
+            "yearOfCentury": 20,
+            "yearOfEra": 2020,
+            "zone": {
+             "fixed": true,
+             "id": "Etc/UTC"
+            }
+           },
+           "reason": "PodCompleted",
+           "status": "False",
+           "type": "ContainersReady"
+          },
+          {
+           "lastTransitionTime": {
+            "afterNow": false,
+            "beforeNow": true,
+            "centuryOfEra": 20,
+            "chronology": {
+             "zone": {
+              "fixed": true,
+              "id": "Etc/UTC"
+             }
+            },
+            "dayOfMonth": 3,
+            "dayOfWeek": 2,
+            "dayOfYear": 308,
+            "equalNow": false,
+            "era": 1,
+            "hourOfDay": 4,
+            "millis": 1604379146000,
+            "millisOfDay": 17546000,
+            "millisOfSecond": 0,
+            "minuteOfDay": 292,
+            "minuteOfHour": 52,
+            "monthOfYear": 11,
+            "secondOfDay": 17546,
+            "secondOfMinute": 26,
+            "weekOfWeekyear": 45,
+            "weekyear": 2020,
+            "year": 2020,
+            "yearOfCentury": 20,
+            "yearOfEra": 2020,
+            "zone": {
+             "fixed": true,
+             "id": "Etc/UTC"
+            }
+           },
+           "status": "True",
+           "type": "PodScheduled"
+          }
+         ],
+         "containerStatuses": [
+          {
+           "containerID": "docker://af8c178c80749d70c887368a93dd70d7bcf1e7c1a570d83a653bfc5dcfc1197c",
+           "image": "opsmxdev/apline-with-curl:latest",
+           "imageID": "docker-pullable://opsmxdev/apline-with-curl@sha256:fa8560f749ca3ac2b797a2a24c2ae9bc76ad75b15efa3d919ca1f9d14c170d54",
+           "lastState": {},
+           "name": "email-notify",
+           "ready": false,
+           "restartCount": 0,
+           "state": {
+            "terminated": {
+             "containerID": "docker://af8c178c80749d70c887368a93dd70d7bcf1e7c1a570d83a653bfc5dcfc1197c",
+             "exitCode": 0,
+             "finishedAt": {
+              "afterNow": false,
+              "beforeNow": true,
+              "centuryOfEra": 20,
+              "chronology": {
+               "zone": {
+                "fixed": true,
+                "id": "Etc/UTC"
+               }
+              },
+              "dayOfMonth": 3,
+              "dayOfWeek": 2,
+              "dayOfYear": 308,
+              "equalNow": false,
+              "era": 1,
+              "hourOfDay": 4,
+              "millis": 1604379172000,
+              "millisOfDay": 17572000,
+              "millisOfSecond": 0,
+              "minuteOfDay": 292,
+              "minuteOfHour": 52,
+              "monthOfYear": 11,
+              "secondOfDay": 17572,
+              "secondOfMinute": 52,
+              "weekOfWeekyear": 45,
+              "weekyear": 2020,
+              "year": 2020,
+              "yearOfCentury": 20,
+              "yearOfEra": 2020,
+              "zone": {
+               "fixed": true,
+               "id": "Etc/UTC"
+              }
+             },
+             "reason": "Completed",
+             "startedAt": {
+              "afterNow": false,
+              "beforeNow": true,
+              "centuryOfEra": 20,
+              "chronology": {
+               "zone": {
+                "fixed": true,
+                "id": "Etc/UTC"
+               }
+              },
+              "dayOfMonth": 3,
+              "dayOfWeek": 2,
+              "dayOfYear": 308,
+              "equalNow": false,
+              "era": 1,
+              "hourOfDay": 4,
+              "millis": 1604379151000,
+              "millisOfDay": 17551000,
+              "millisOfSecond": 0,
+              "minuteOfDay": 292,
+              "minuteOfHour": 52,
+              "monthOfYear": 11,
+              "secondOfDay": 17551,
+              "secondOfMinute": 31,
+              "weekOfWeekyear": 45,
+              "weekyear": 2020,
+              "year": 2020,
+              "yearOfCentury": 20,
+              "yearOfEra": 2020,
+              "zone": {
+               "fixed": true,
+               "id": "Etc/UTC"
+              }
+             }
+            }
+           }
+          }
+         ],
+         "hostIP": "10.168.3.10",
+         "phase": "Succeeded",
+         "podIP": "10.244.0.15",
+         "qosClass": "BestEffort",
+         "startTime": {
+          "afterNow": false,
+          "beforeNow": true,
+          "centuryOfEra": 20,
+          "chronology": {
+           "zone": {
+            "fixed": true,
+            "id": "Etc/UTC"
+           }
+          },
+          "dayOfMonth": 3,
+          "dayOfWeek": 2,
+          "dayOfYear": 308,
+          "equalNow": false,
+          "era": 1,
+          "hourOfDay": 4,
+          "millis": 1604379146000,
+          "millisOfDay": 17546000,
+          "millisOfSecond": 0,
+          "minuteOfDay": 292,
+          "minuteOfHour": 52,
+          "monthOfYear": 11,
+          "secondOfDay": 17546,
+          "secondOfMinute": 26,
+          "weekOfWeekyear": 45,
+          "weekyear": 2020,
+          "year": 2020,
+          "yearOfCentury": 20,
+          "yearOfEra": 2020,
+          "zone": {
+           "fixed": true,
+           "id": "Etc/UTC"
+          }
+         }
+        }
+       }
+      ],
+      "provider": "kubernetes"
+     },
+     "kato.last.task.id": {
+      "id": "357a436b-2004-4ca4-a47f-8e10d50169e8"
+     },
+     "kato.result.expected": false,
+     "kato.task.firstNotFoundRetry": -1,
+     "kato.task.lastStatus": "SUCCEEDED",
+     "kato.task.notFoundRetryCount": 0,
+     "kato.task.terminalRetryCount": 0,
+     "kato.tasks": [
+      {
+       "history": [
+        {
+         "phase": "ORCHESTRATION",
+         "status": "Initializing Orchestration Task"
+        },
+        {
+         "phase": "ORCHESTRATION",
+         "status": "Processing op: KubernetesRunJobOperation"
+        },
+        {
+         "phase": "RUN_KUBERNETES_JOB",
+         "status": "Running Kubernetes job..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Beginning deployment of manifest..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Finding deployer for job..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Swapping out artifacts in job smtpjob-3fd6f9925ad892e6 from context..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Checking if all requested artifacts were bound..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Sorting manifests by priority..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Deploy order is: job smtpjob-3fd6f9925ad892e6"
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Finding deployer for job..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Annotating manifest job smtpjob-3fd6f9925ad892e6 with artifact, relationships \u0026 moniker..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Swapping out artifacts in job smtpjob-3fd6f9925ad892e6 from other deployments..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Submitting manifest job smtpjob-3fd6f9925ad892e6 to kubernetes master..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Deploy manifest task completed successfully."
+        },
+        {
+         "phase": "ORCHESTRATION",
+         "status": "Orchestration completed."
+        }
+       ],
+       "id": "357a436b-2004-4ca4-a47f-8e10d50169e8",
+       "resultObjects": [
+        {
+         "boundArtifacts": [],
+         "createdArtifacts": [
+          {
+           "customKind": false,
+           "location": "oes",
+           "metadata": {
+            "account": "default"
+           },
+           "name": "smtpjob-3fd6f9925ad892e6",
+           "reference": "smtpjob-3fd6f9925ad892e6",
+           "type": "kubernetes/job"
+          }
+         ],
+         "deployedNamesByLocation": {
+          "oes": [
+           "job smtpjob-3fd6f9925ad892e6"
+          ]
+         },
+         "manifestNamesByNamespace": {
+          "oes": [
+           "job smtpjob-3fd6f9925ad892e6"
+          ]
+         },
+         "manifests": [
+          {
+           "apiVersion": "batch/v1",
+           "kind": "Job",
+           "metadata": {
+            "annotations": {
+             "artifact.spinnaker.io/location": "oes",
+             "artifact.spinnaker.io/name": "smtpjob-3fd6f9925ad892e6",
+             "artifact.spinnaker.io/type": "kubernetes/job",
+             "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"batch/v1\",\"kind\":\"Job\",\"metadata\":{\"annotations\":{\"artifact.spinnaker.io/location\":\"oes\",\"artifact.spinnaker.io/name\":\"smtpjob-3fd6f9925ad892e6\",\"artifact.spinnaker.io/type\":\"kubernetes/job\",\"moniker.spinnaker.io/application\":\"test\",\"moniker.spinnaker.io/cluster\":\"job smtpjob-3fd6f9925ad892e6\"},\"labels\":{\"app.kubernetes.io/managed-by\":\"spinnaker\",\"app.kubernetes.io/name\":\"test\"},\"name\":\"smtpjob-3fd6f9925ad892e6\",\"namespace\":\"oes\"},\"spec\":{\"backoffLimit\":0,\"template\":{\"spec\":{\"containers\":[{\"command\":[\"sh\",\"/tmp/initscript/run.sh\"],\"env\":[{\"name\":\"email\",\"value\":\"mahesh.kota@opsmx.io\"},{\"name\":\"ccmail\",\"value\":\"hanumesh.kumar@opsmx.io\"},{\"name\":\"subject\",\"value\":\"testfromspinnaker\"},{\"name\":\"body\",\"value\":\"Test message from spinnaker which is created by Mahesh\"},{\"name\":\"ssmtpemail\",\"valueFrom\":{\"secretKeyRef\":{\"key\":\"ssmtpemail\",\"name\":\"ssmtp-secrets\"}}},{\"name\":\"emailpassword\",\"valueFrom\":{\"secretKeyRef\":{\"key\":\"emailpassword\",\"name\":\"ssmtp-secrets\"}}}],\"image\":\"opsmxdev/apline-with-curl\",\"imagePullPolicy\":\"Always\",\"name\":\"email-notify\",\"volumeMounts\":[{\"mountPath\":\"/tmp/initscript/\",\"name\":\"initscript\"}]}],\"restartPolicy\":\"Never\",\"volumes\":[{\"configMap\":{\"name\":\"email-config\"},\"name\":\"initscript\"}]}}}}\n",
+             "moniker.spinnaker.io/application": "test",
+             "moniker.spinnaker.io/cluster": "job smtpjob-3fd6f9925ad892e6"
+            },
+            "creationTimestamp": "2020-11-03T04:52:26Z",
+            "labels": {
+             "app.kubernetes.io/managed-by": "spinnaker",
+             "app.kubernetes.io/name": "test"
+            },
+            "name": "smtpjob-3fd6f9925ad892e6",
+            "namespace": "oes",
+            "resourceVersion": "76406",
+            "selfLink": "/apis/batch/v1/namespaces/oes/jobs/smtpjob-3fd6f9925ad892e6",
+            "uid": "5ab83a07-147f-4493-a9fe-72bae4b1bb8a"
+           },
+           "spec": {
+            "backoffLimit": 0,
+            "completions": 1,
+            "parallelism": 1,
+            "selector": {
+             "matchLabels": {
+              "controller-uid": "5ab83a07-147f-4493-a9fe-72bae4b1bb8a"
+             }
+            },
+            "template": {
+             "metadata": {
+              "labels": {
+               "controller-uid": "5ab83a07-147f-4493-a9fe-72bae4b1bb8a",
+               "job-name": "smtpjob-3fd6f9925ad892e6"
+              }
+             },
+             "spec": {
+              "containers": [
+               {
+                "command": [
+                 "sh",
+                 "/tmp/initscript/run.sh"
+                ],
+                "env": [
+                 {
+                  "name": "email",
+                  "value": "mahesh.kota@opsmx.io"
+                 },
+                 {
+                  "name": "ccmail",
+                  "value": "hanumesh.kumar@opsmx.io"
+                 },
+                 {
+                  "name": "subject",
+                  "value": "testfromspinnaker"
+                 },
+                 {
+                  "name": "body",
+                  "value": "Test message from spinnaker which is created by Mahesh"
+                 },
+                 {
+                  "name": "ssmtpemail",
+                  "valueFrom": {
+                   "secretKeyRef": {
+                    "key": "ssmtpemail",
+                    "name": "ssmtp-secrets"
+                   }
+                  }
+                 },
+                 {
+                  "name": "emailpassword",
+                  "valueFrom": {
+                   "secretKeyRef": {
+                    "key": "emailpassword",
+                    "name": "ssmtp-secrets"
+                   }
+                  }
+                 }
+                ],
+                "image": "opsmxdev/apline-with-curl",
+                "imagePullPolicy": "Always",
+                "name": "email-notify",
+                "resources": {},
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "volumeMounts": [
+                 {
+                  "mountPath": "/tmp/initscript/",
+                  "name": "initscript"
+                 }
+                ]
+               }
+              ],
+              "dnsPolicy": "ClusterFirst",
+              "restartPolicy": "Never",
+              "schedulerName": "default-scheduler",
+              "securityContext": {},
+              "terminationGracePeriodSeconds": 30,
+              "volumes": [
+               {
+                "configMap": {
+                 "defaultMode": 420,
+                 "name": "email-config"
+                },
+                "name": "initscript"
+               }
+              ]
+             }
+            }
+           },
+           "status": {}
+          }
+         ]
+        }
+       ],
+       "status": {
+        "completed": true,
+        "failed": false,
+        "retryable": false
+       }
+      }
+     ],
+     "manifest": {
+      "apiVersion": "batch/v1",
+      "kind": "Job",
+      "metadata": {
+       "name": "smtpjob",
+       "namespace": "oes"
+      },
+      "spec": {
+       "backoffLimit": 0,
+       "template": {
+        "spec": {
+         "containers": [
+          {
+           "command": [
+            "sh",
+            "/tmp/initscript/run.sh"
+           ],
+           "env": [
+            {
+             "name": "email",
+             "value": "mahesh.kota@opsmx.io"
+            },
+            {
+             "name": "ccmail",
+             "value": "hanumesh.kumar@opsmx.io"
+            },
+            {
+             "name": "subject",
+             "value": "testfromspinnaker"
+            },
+            {
+             "name": "body",
+             "value": "Test message from spinnaker which is created by Mahesh"
+            },
+            {
+             "name": "ssmtpemail",
+             "valueFrom": {
+              "secretKeyRef": {
+               "key": "ssmtpemail",
+               "name": "ssmtp-secrets"
+              }
+             }
+            },
+            {
+             "name": "emailpassword",
+             "valueFrom": {
+              "secretKeyRef": {
+               "key": "emailpassword",
+               "name": "ssmtp-secrets"
+              }
+             }
+            }
+           ],
+           "image": "opsmxdev/apline-with-curl",
+           "imagePullPolicy": "Always",
+           "name": "email-notify",
+           "volumeMounts": [
+            {
+             "mountPath": "/tmp/initscript/",
+             "name": "initscript"
+            }
+           ]
+          }
+         ],
+         "restartPolicy": "Never",
+         "volumes": [
+          {
+           "configMap": {
+            "name": "email-config"
+           },
+           "name": "initscript"
+          }
+         ]
+        }
+       }
+      }
+     },
+     "manifestNamesByNamespaceToRefresh": {
+      "oes": [
+       "job smtpjob-3fd6f9925ad892e6"
+      ]
+     },
+     "notification.type": "runjob",
+     "outputs.boundArtifacts": [],
+     "outputs.createdArtifacts": [
+      {
+       "customKind": false,
+       "location": "oes",
+       "metadata": {
+        "account": "default"
+       },
+       "name": "smtpjob-3fd6f9925ad892e6",
+       "reference": "smtpjob-3fd6f9925ad892e6",
+       "type": "kubernetes/job"
+      }
+     ],
+     "outputs.manifestNamesByNamespace": {
+      "oes": [
+       "job smtpjob-3fd6f9925ad892e6"
+      ]
+     },
+     "outputs.manifests": [
+      {
+       "apiVersion": "batch/v1",
+       "kind": "Job",
+       "metadata": {
+        "annotations": {
+         "artifact.spinnaker.io/location": "oes",
+         "artifact.spinnaker.io/name": "smtpjob-3fd6f9925ad892e6",
+         "artifact.spinnaker.io/type": "kubernetes/job",
+         "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"batch/v1\",\"kind\":\"Job\",\"metadata\":{\"annotations\":{\"artifact.spinnaker.io/location\":\"oes\",\"artifact.spinnaker.io/name\":\"smtpjob-3fd6f9925ad892e6\",\"artifact.spinnaker.io/type\":\"kubernetes/job\",\"moniker.spinnaker.io/application\":\"test\",\"moniker.spinnaker.io/cluster\":\"job smtpjob-3fd6f9925ad892e6\"},\"labels\":{\"app.kubernetes.io/managed-by\":\"spinnaker\",\"app.kubernetes.io/name\":\"test\"},\"name\":\"smtpjob-3fd6f9925ad892e6\",\"namespace\":\"oes\"},\"spec\":{\"backoffLimit\":0,\"template\":{\"spec\":{\"containers\":[{\"command\":[\"sh\",\"/tmp/initscript/run.sh\"],\"env\":[{\"name\":\"email\",\"value\":\"mahesh.kota@opsmx.io\"},{\"name\":\"ccmail\",\"value\":\"hanumesh.kumar@opsmx.io\"},{\"name\":\"subject\",\"value\":\"testfromspinnaker\"},{\"name\":\"body\",\"value\":\"Test message from spinnaker which is created by Mahesh\"},{\"name\":\"ssmtpemail\",\"valueFrom\":{\"secretKeyRef\":{\"key\":\"ssmtpemail\",\"name\":\"ssmtp-secrets\"}}},{\"name\":\"emailpassword\",\"valueFrom\":{\"secretKeyRef\":{\"key\":\"emailpassword\",\"name\":\"ssmtp-secrets\"}}}],\"image\":\"opsmxdev/apline-with-curl\",\"imagePullPolicy\":\"Always\",\"name\":\"email-notify\",\"volumeMounts\":[{\"mountPath\":\"/tmp/initscript/\",\"name\":\"initscript\"}]}],\"restartPolicy\":\"Never\",\"volumes\":[{\"configMap\":{\"name\":\"email-config\"},\"name\":\"initscript\"}]}}}}\n",
+         "moniker.spinnaker.io/application": "test",
+         "moniker.spinnaker.io/cluster": "job smtpjob-3fd6f9925ad892e6"
+        },
+        "creationTimestamp": "2020-11-03T04:52:26Z",
+        "labels": {
+         "app.kubernetes.io/managed-by": "spinnaker",
+         "app.kubernetes.io/name": "test"
+        },
+        "name": "smtpjob-3fd6f9925ad892e6",
+        "namespace": "oes",
+        "resourceVersion": "76406",
+        "selfLink": "/apis/batch/v1/namespaces/oes/jobs/smtpjob-3fd6f9925ad892e6",
+        "uid": "5ab83a07-147f-4493-a9fe-72bae4b1bb8a"
+       },
+       "spec": {
+        "backoffLimit": 0,
+        "completions": 1,
+        "parallelism": 1,
+        "selector": {
+         "matchLabels": {
+          "controller-uid": "5ab83a07-147f-4493-a9fe-72bae4b1bb8a"
+         }
+        },
+        "template": {
+         "metadata": {
+          "labels": {
+           "controller-uid": "5ab83a07-147f-4493-a9fe-72bae4b1bb8a",
+           "job-name": "smtpjob-3fd6f9925ad892e6"
+          }
+         },
+         "spec": {
+          "containers": [
+           {
+            "command": [
+             "sh",
+             "/tmp/initscript/run.sh"
+            ],
+            "env": [
+             {
+              "name": "email",
+              "value": "mahesh.kota@opsmx.io"
+             },
+             {
+              "name": "ccmail",
+              "value": "hanumesh.kumar@opsmx.io"
+             },
+             {
+              "name": "subject",
+              "value": "testfromspinnaker"
+             },
+             {
+              "name": "body",
+              "value": "Test message from spinnaker which is created by Mahesh"
+             },
+             {
+              "name": "ssmtpemail",
+              "valueFrom": {
+               "secretKeyRef": {
+                "key": "ssmtpemail",
+                "name": "ssmtp-secrets"
+               }
+              }
+             },
+             {
+              "name": "emailpassword",
+              "valueFrom": {
+               "secretKeyRef": {
+                "key": "emailpassword",
+                "name": "ssmtp-secrets"
+               }
+              }
+             }
+            ],
+            "image": "opsmxdev/apline-with-curl",
+            "imagePullPolicy": "Always",
+            "name": "email-notify",
+            "resources": {},
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "volumeMounts": [
+             {
+              "mountPath": "/tmp/initscript/",
+              "name": "initscript"
+             }
+            ]
+           }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "restartPolicy": "Never",
+          "schedulerName": "default-scheduler",
+          "securityContext": {},
+          "terminationGracePeriodSeconds": 30,
+          "volumes": [
+           {
+            "configMap": {
+             "defaultMode": 420,
+             "name": "email-config"
+            },
+            "name": "initscript"
+           }
+          ]
+         }
+        }
+       },
+       "status": {}
+      }
+     ],
+     "parameters": {
+      "body": "Test message from spinnaker which is created by Mahesh",
+      "bodymessage": "spinnaker",
+      "ccmail": "hanumesh.kumar@opsmx.io",
+      "email": "mahesh.kota@opsmx.io",
+      "subject": "testfromspinnaker"
+     },
+     "preconfiguredJobParameters": [
+      {
+       "defaultValue": "",
+       "description": "Please enter the Email address",
+       "label": "Email",
+       "mapping": "manifest.spec.template.spec.containers[0].env[0].value",
+       "name": "email",
+       "order": 0,
+       "type": "string"
+      },
+      {
+       "defaultValue": "",
+       "description": "Please enter CC mail address.",
+       "label": "CC Address",
+       "mapping": "manifest.spec.template.spec.containers[0].env[1].value",
+       "name": "ccmail",
+       "order": 0,
+       "type": "string"
+      },
+      {
+       "defaultValue": "",
+       "description": "Please enter Subject",
+       "label": "Subject",
+       "mapping": "manifest.spec.template.spec.containers[0].env[2].value",
+       "name": "subject",
+       "order": 0,
+       "type": "string"
+      },
+      {
+       "defaultValue": "",
+       "description": "Please enter body message.",
+       "label": "Body Message",
+       "mapping": "manifest.spec.template.spec.containers[0].env[3].value",
+       "name": "body",
+       "order": 0,
+       "type": "string"
+      }
+     ],
+     "processed.scopedManifests": [
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job smtpjob-3fd6f9925ad892e6"
+      }
+     ],
+     "refreshed.scopedManifests": [
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job smtpjob-3fd6f9925ad892e6"
+      }
+     ],
+     "shouldRefreshManifestNamesByNamespaceToRefresh": false,
+     "waitForCompletion": true
+    },
+    "endTime": 1604379183317,
+    "id": "01EP675VVV61TBWWA5TAEMHK21",
+    "name": "CustomnotificationStage",
+    "outputs": {
+     "artifacts": [
+      {
+       "customKind": false,
+       "location": "oes",
+       "metadata": {
+        "account": "default"
+       },
+       "name": "smtpjob-3fd6f9925ad892e6",
+       "reference": "smtpjob-3fd6f9925ad892e6",
+       "type": "kubernetes/job"
+      }
+     ],
+     "completionDetails": {
+      "exitCode": "",
+      "message": "",
+      "reason": "",
+      "signal": ""
+     },
+     "jobStatus": {
+      "account": "default",
+      "completionDetails": {
+       "exitCode": "",
+       "message": "",
+       "reason": "",
+       "signal": ""
+      },
+      "createdTime": 1604379146000,
+      "jobState": "Succeeded",
+      "location": "oes",
+      "name": "smtpjob-3fd6f9925ad892e6",
+      "pods": [
+       {
+        "name": "smtpjob-3fd6f9925ad892e6-7r9bb",
+        "status": {
+         "conditions": [
+          {
+           "lastTransitionTime": {
+            "afterNow": false,
+            "beforeNow": true,
+            "centuryOfEra": 20,
+            "chronology": {
+             "zone": {
+              "fixed": true,
+              "id": "Etc/UTC"
+             }
+            },
+            "dayOfMonth": 3,
+            "dayOfWeek": 2,
+            "dayOfYear": 308,
+            "equalNow": false,
+            "era": 1,
+            "hourOfDay": 4,
+            "millis": 1604379146000,
+            "millisOfDay": 17546000,
+            "millisOfSecond": 0,
+            "minuteOfDay": 292,
+            "minuteOfHour": 52,
+            "monthOfYear": 11,
+            "secondOfDay": 17546,
+            "secondOfMinute": 26,
+            "weekOfWeekyear": 45,
+            "weekyear": 2020,
+            "year": 2020,
+            "yearOfCentury": 20,
+            "yearOfEra": 2020,
+            "zone": {
+             "fixed": true,
+             "id": "Etc/UTC"
+            }
+           },
+           "reason": "PodCompleted",
+           "status": "True",
+           "type": "Initialized"
+          },
+          {
+           "lastTransitionTime": {
+            "afterNow": false,
+            "beforeNow": true,
+            "centuryOfEra": 20,
+            "chronology": {
+             "zone": {
+              "fixed": true,
+              "id": "Etc/UTC"
+             }
+            },
+            "dayOfMonth": 3,
+            "dayOfWeek": 2,
+            "dayOfYear": 308,
+            "equalNow": false,
+            "era": 1,
+            "hourOfDay": 4,
+            "millis": 1604379173000,
+            "millisOfDay": 17573000,
+            "millisOfSecond": 0,
+            "minuteOfDay": 292,
+            "minuteOfHour": 52,
+            "monthOfYear": 11,
+            "secondOfDay": 17573,
+            "secondOfMinute": 53,
+            "weekOfWeekyear": 45,
+            "weekyear": 2020,
+            "year": 2020,
+            "yearOfCentury": 20,
+            "yearOfEra": 2020,
+            "zone": {
+             "fixed": true,
+             "id": "Etc/UTC"
+            }
+           },
+           "reason": "PodCompleted",
+           "status": "False",
+           "type": "Ready"
+          },
+          {
+           "lastTransitionTime": {
+            "afterNow": false,
+            "beforeNow": true,
+            "centuryOfEra": 20,
+            "chronology": {
+             "zone": {
+              "fixed": true,
+              "id": "Etc/UTC"
+             }
+            },
+            "dayOfMonth": 3,
+            "dayOfWeek": 2,
+            "dayOfYear": 308,
+            "equalNow": false,
+            "era": 1,
+            "hourOfDay": 4,
+            "millis": 1604379173000,
+            "millisOfDay": 17573000,
+            "millisOfSecond": 0,
+            "minuteOfDay": 292,
+            "minuteOfHour": 52,
+            "monthOfYear": 11,
+            "secondOfDay": 17573,
+            "secondOfMinute": 53,
+            "weekOfWeekyear": 45,
+            "weekyear": 2020,
+            "year": 2020,
+            "yearOfCentury": 20,
+            "yearOfEra": 2020,
+            "zone": {
+             "fixed": true,
+             "id": "Etc/UTC"
+            }
+           },
+           "reason": "PodCompleted",
+           "status": "False",
+           "type": "ContainersReady"
+          },
+          {
+           "lastTransitionTime": {
+            "afterNow": false,
+            "beforeNow": true,
+            "centuryOfEra": 20,
+            "chronology": {
+             "zone": {
+              "fixed": true,
+              "id": "Etc/UTC"
+             }
+            },
+            "dayOfMonth": 3,
+            "dayOfWeek": 2,
+            "dayOfYear": 308,
+            "equalNow": false,
+            "era": 1,
+            "hourOfDay": 4,
+            "millis": 1604379146000,
+            "millisOfDay": 17546000,
+            "millisOfSecond": 0,
+            "minuteOfDay": 292,
+            "minuteOfHour": 52,
+            "monthOfYear": 11,
+            "secondOfDay": 17546,
+            "secondOfMinute": 26,
+            "weekOfWeekyear": 45,
+            "weekyear": 2020,
+            "year": 2020,
+            "yearOfCentury": 20,
+            "yearOfEra": 2020,
+            "zone": {
+             "fixed": true,
+             "id": "Etc/UTC"
+            }
+           },
+           "status": "True",
+           "type": "PodScheduled"
+          }
+         ],
+         "containerStatuses": [
+          {
+           "containerID": "docker://af8c178c80749d70c887368a93dd70d7bcf1e7c1a570d83a653bfc5dcfc1197c",
+           "image": "opsmxdev/apline-with-curl:latest",
+           "imageID": "docker-pullable://opsmxdev/apline-with-curl@sha256:fa8560f749ca3ac2b797a2a24c2ae9bc76ad75b15efa3d919ca1f9d14c170d54",
+           "lastState": {},
+           "name": "email-notify",
+           "ready": false,
+           "restartCount": 0,
+           "state": {
+            "terminated": {
+             "containerID": "docker://af8c178c80749d70c887368a93dd70d7bcf1e7c1a570d83a653bfc5dcfc1197c",
+             "exitCode": 0,
+             "finishedAt": {
+              "afterNow": false,
+              "beforeNow": true,
+              "centuryOfEra": 20,
+              "chronology": {
+               "zone": {
+                "fixed": true,
+                "id": "Etc/UTC"
+               }
+              },
+              "dayOfMonth": 3,
+              "dayOfWeek": 2,
+              "dayOfYear": 308,
+              "equalNow": false,
+              "era": 1,
+              "hourOfDay": 4,
+              "millis": 1604379172000,
+              "millisOfDay": 17572000,
+              "millisOfSecond": 0,
+              "minuteOfDay": 292,
+              "minuteOfHour": 52,
+              "monthOfYear": 11,
+              "secondOfDay": 17572,
+              "secondOfMinute": 52,
+              "weekOfWeekyear": 45,
+              "weekyear": 2020,
+              "year": 2020,
+              "yearOfCentury": 20,
+              "yearOfEra": 2020,
+              "zone": {
+               "fixed": true,
+               "id": "Etc/UTC"
+              }
+             },
+             "reason": "Completed",
+             "startedAt": {
+              "afterNow": false,
+              "beforeNow": true,
+              "centuryOfEra": 20,
+              "chronology": {
+               "zone": {
+                "fixed": true,
+                "id": "Etc/UTC"
+               }
+              },
+              "dayOfMonth": 3,
+              "dayOfWeek": 2,
+              "dayOfYear": 308,
+              "equalNow": false,
+              "era": 1,
+              "hourOfDay": 4,
+              "millis": 1604379151000,
+              "millisOfDay": 17551000,
+              "millisOfSecond": 0,
+              "minuteOfDay": 292,
+              "minuteOfHour": 52,
+              "monthOfYear": 11,
+              "secondOfDay": 17551,
+              "secondOfMinute": 31,
+              "weekOfWeekyear": 45,
+              "weekyear": 2020,
+              "year": 2020,
+              "yearOfCentury": 20,
+              "yearOfEra": 2020,
+              "zone": {
+               "fixed": true,
+               "id": "Etc/UTC"
+              }
+             }
+            }
+           }
+          }
+         ],
+         "hostIP": "10.168.3.10",
+         "phase": "Succeeded",
+         "podIP": "10.244.0.15",
+         "qosClass": "BestEffort",
+         "startTime": {
+          "afterNow": false,
+          "beforeNow": true,
+          "centuryOfEra": 20,
+          "chronology": {
+           "zone": {
+            "fixed": true,
+            "id": "Etc/UTC"
+           }
+          },
+          "dayOfMonth": 3,
+          "dayOfWeek": 2,
+          "dayOfYear": 308,
+          "equalNow": false,
+          "era": 1,
+          "hourOfDay": 4,
+          "millis": 1604379146000,
+          "millisOfDay": 17546000,
+          "millisOfSecond": 0,
+          "minuteOfDay": 292,
+          "minuteOfHour": 52,
+          "monthOfYear": 11,
+          "secondOfDay": 17546,
+          "secondOfMinute": 26,
+          "weekOfWeekyear": 45,
+          "weekyear": 2020,
+          "year": 2020,
+          "yearOfCentury": 20,
+          "yearOfEra": 2020,
+          "zone": {
+           "fixed": true,
+           "id": "Etc/UTC"
+          }
+         }
+        }
+       }
+      ],
+      "provider": "kubernetes"
+     },
+     "manifestNamesByNamespaceToRefresh": {
+      "oes": [
+       "job smtpjob-3fd6f9925ad892e6"
+      ]
+     },
+     "outputs.boundArtifacts": [],
+     "outputs.createdArtifacts": [
+      {
+       "customKind": false,
+       "location": "oes",
+       "metadata": {
+        "account": "default"
+       },
+       "name": "smtpjob-3fd6f9925ad892e6",
+       "reference": "smtpjob-3fd6f9925ad892e6",
+       "type": "kubernetes/job"
+      }
+     ],
+     "outputs.manifestNamesByNamespace": {
+      "oes": [
+       "job smtpjob-3fd6f9925ad892e6"
+      ]
+     },
+     "outputs.manifests": [
+      {
+       "apiVersion": "batch/v1",
+       "kind": "Job",
+       "metadata": {
+        "annotations": {
+         "artifact.spinnaker.io/location": "oes",
+         "artifact.spinnaker.io/name": "smtpjob-3fd6f9925ad892e6",
+         "artifact.spinnaker.io/type": "kubernetes/job",
+         "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"batch/v1\",\"kind\":\"Job\",\"metadata\":{\"annotations\":{\"artifact.spinnaker.io/location\":\"oes\",\"artifact.spinnaker.io/name\":\"smtpjob-3fd6f9925ad892e6\",\"artifact.spinnaker.io/type\":\"kubernetes/job\",\"moniker.spinnaker.io/application\":\"test\",\"moniker.spinnaker.io/cluster\":\"job smtpjob-3fd6f9925ad892e6\"},\"labels\":{\"app.kubernetes.io/managed-by\":\"spinnaker\",\"app.kubernetes.io/name\":\"test\"},\"name\":\"smtpjob-3fd6f9925ad892e6\",\"namespace\":\"oes\"},\"spec\":{\"backoffLimit\":0,\"template\":{\"spec\":{\"containers\":[{\"command\":[\"sh\",\"/tmp/initscript/run.sh\"],\"env\":[{\"name\":\"email\",\"value\":\"mahesh.kota@opsmx.io\"},{\"name\":\"ccmail\",\"value\":\"hanumesh.kumar@opsmx.io\"},{\"name\":\"subject\",\"value\":\"testfromspinnaker\"},{\"name\":\"body\",\"value\":\"Test message from spinnaker which is created by Mahesh\"},{\"name\":\"ssmtpemail\",\"valueFrom\":{\"secretKeyRef\":{\"key\":\"ssmtpemail\",\"name\":\"ssmtp-secrets\"}}},{\"name\":\"emailpassword\",\"valueFrom\":{\"secretKeyRef\":{\"key\":\"emailpassword\",\"name\":\"ssmtp-secrets\"}}}],\"image\":\"opsmxdev/apline-with-curl\",\"imagePullPolicy\":\"Always\",\"name\":\"email-notify\",\"volumeMounts\":[{\"mountPath\":\"/tmp/initscript/\",\"name\":\"initscript\"}]}],\"restartPolicy\":\"Never\",\"volumes\":[{\"configMap\":{\"name\":\"email-config\"},\"name\":\"initscript\"}]}}}}\n",
+         "moniker.spinnaker.io/application": "test",
+         "moniker.spinnaker.io/cluster": "job smtpjob-3fd6f9925ad892e6"
+        },
+        "creationTimestamp": "2020-11-03T04:52:26Z",
+        "labels": {
+         "app.kubernetes.io/managed-by": "spinnaker",
+         "app.kubernetes.io/name": "test"
+        },
+        "name": "smtpjob-3fd6f9925ad892e6",
+        "namespace": "oes",
+        "resourceVersion": "76406",
+        "selfLink": "/apis/batch/v1/namespaces/oes/jobs/smtpjob-3fd6f9925ad892e6",
+        "uid": "5ab83a07-147f-4493-a9fe-72bae4b1bb8a"
+       },
+       "spec": {
+        "backoffLimit": 0,
+        "completions": 1,
+        "parallelism": 1,
+        "selector": {
+         "matchLabels": {
+          "controller-uid": "5ab83a07-147f-4493-a9fe-72bae4b1bb8a"
+         }
+        },
+        "template": {
+         "metadata": {
+          "labels": {
+           "controller-uid": "5ab83a07-147f-4493-a9fe-72bae4b1bb8a",
+           "job-name": "smtpjob-3fd6f9925ad892e6"
+          }
+         },
+         "spec": {
+          "containers": [
+           {
+            "command": [
+             "sh",
+             "/tmp/initscript/run.sh"
+            ],
+            "env": [
+             {
+              "name": "email",
+              "value": "mahesh.kota@opsmx.io"
+             },
+             {
+              "name": "ccmail",
+              "value": "hanumesh.kumar@opsmx.io"
+             },
+             {
+              "name": "subject",
+              "value": "testfromspinnaker"
+             },
+             {
+              "name": "body",
+              "value": "Test message from spinnaker which is created by Mahesh"
+             },
+             {
+              "name": "ssmtpemail",
+              "valueFrom": {
+               "secretKeyRef": {
+                "key": "ssmtpemail",
+                "name": "ssmtp-secrets"
+               }
+              }
+             },
+             {
+              "name": "emailpassword",
+              "valueFrom": {
+               "secretKeyRef": {
+                "key": "emailpassword",
+                "name": "ssmtp-secrets"
+               }
+              }
+             }
+            ],
+            "image": "opsmxdev/apline-with-curl",
+            "imagePullPolicy": "Always",
+            "name": "email-notify",
+            "resources": {},
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "volumeMounts": [
+             {
+              "mountPath": "/tmp/initscript/",
+              "name": "initscript"
+             }
+            ]
+           }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "restartPolicy": "Never",
+          "schedulerName": "default-scheduler",
+          "securityContext": {},
+          "terminationGracePeriodSeconds": 30,
+          "volumes": [
+           {
+            "configMap": {
+             "defaultMode": 420,
+             "name": "email-config"
+            },
+            "name": "initscript"
+           }
+          ]
+         }
+        }
+       },
+       "status": {}
+      }
+     ],
+     "shouldRefreshManifestNamesByNamespaceToRefresh": true
+    },
+    "refId": "1",
+    "requisiteStageRefIds": [],
+    "startTime": 1604379144316,
+    "status": "SUCCEEDED",
+    "tasks": [
+     {
+      "endTime": 1604379145814,
+      "id": "1",
+      "implementingClass": "com.netflix.spinnaker.orca.clouddriver.tasks.job.RunJobTask",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "runJob",
+      "stageEnd": false,
+      "stageStart": true,
+      "startTime": 1604379145325,
+      "status": "SUCCEEDED"
+     },
+     {
+      "endTime": 1604379151173,
+      "id": "2",
+      "implementingClass": "com.netflix.spinnaker.orca.clouddriver.tasks.job.MonitorJobTask",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "monitorDeploy",
+      "stageEnd": false,
+      "stageStart": false,
+      "startTime": 1604379145873,
+      "status": "SUCCEEDED"
+     },
+     {
+      "endTime": 1604379151372,
+      "id": "3",
+      "implementingClass": "com.netflix.spinnaker.orca.clouddriver.tasks.manifest.PromoteManifestKatoOutputsTask",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "promoteOutputs",
+      "stageEnd": false,
+      "stageStart": false,
+      "startTime": 1604379151241,
+      "status": "SUCCEEDED"
+     },
+     {
+      "endTime": 1604379182613,
+      "id": "4",
+      "implementingClass": "com.netflix.spinnaker.orca.clouddriver.tasks.manifest.ManifestForceCacheRefreshTask",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "forceCacheRefresh",
+      "stageEnd": false,
+      "stageStart": false,
+      "startTime": 1604379151466,
+      "status": "SUCCEEDED"
+     },
+     {
+      "endTime": 1604379183265,
+      "id": "5",
+      "implementingClass": "com.netflix.spinnaker.orca.clouddriver.tasks.job.WaitOnJobCompletion",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "waitOnJobCompletion",
+      "stageEnd": true,
+      "stageStart": false,
+      "startTime": 1604379182672,
+      "status": "SUCCEEDED"
+     }
+    ],
+    "type": "customnotification"
+   }
+  ],
+  "startTime": 1604379144231,
+  "status": "SUCCEEDED",
+  "systemNotifications": [],
+  "trigger": {
+   "artifacts": [],
+   "dryRun": false,
+   "enabled": false,
+   "eventId": "c0c9e788-59ee-4b43-9010-0f9089f21665",
+   "executionId": "01EP675VD3XM33GTQXB5ERB1VG",
+   "expectedArtifacts": [],
+   "notifications": [],
+   "parameters": {
+    "mail": "mahesh.kota@opsmx.io"
+   },
+   "rebake": false,
+   "resolvedExpectedArtifacts": [],
+   "strategy": false,
+   "type": "manual",
+   "user": "[anonymous]"
+  },
+  "type": "PIPELINE"
+ }
+]
+[
+ {
+  "application": "test",
+  "authentication": {
+   "allowedAccounts": [
+    "default",
+    "dockerhub"
+   ],
+   "user": "anonymous"
+  },
+  "buildTime": 1604403723206,
+  "canceled": false,
+  "endTime": 1604403737603,
+  "id": "01EP6YKYX60KHSJZB0TDAK8X20",
+  "initialConfig": {},
+  "keepWaitingPipelines": false,
+  "limitConcurrent": true,
+  "name": "deljob",
+  "notifications": [],
+  "origin": "api",
+  "pipelineConfigId": "356dd3b8-23f2-41b6-a464-000b3f5c2cf4",
+  "spelEvaluator": "v4",
+  "stages": [
+   {
+    "context": {
+     "account": "default",
+     "app": "test",
+     "artifacts": [],
+     "cloudProvider": "kubernetes",
+     "deploy.account.name": "default",
+     "deploy.server.groups": {},
+     "deployedManifests": [
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fd8d86e3d34767c"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fec87a7de4ccac3"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fed75fb365676d4"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fa77b86e3708990"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fb2a45351c07500"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fe41d88e7797915"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fb662979c38b2d8"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fc30661de87cb00"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fe5adae5ce80090"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fee8fbe33fcb637"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fcbb7c37c1df4d8"
+      }
+     ],
+     "errors": [],
+     "kato.last.task.id": {
+      "id": "9f177761-d12f-4144-a474-d723ac378504"
+     },
+     "kato.result.expected": true,
+     "kato.task.firstNotFoundRetry": -1,
+     "kato.task.lastStatus": "SUCCEEDED",
+     "kato.task.notFoundRetryCount": 0,
+     "kato.task.terminalRetryCount": 0,
+     "kato.tasks": [
+      {
+       "history": [
+        {
+         "phase": "ORCHESTRATION",
+         "status": "Initializing Orchestration Task"
+        },
+        {
+         "phase": "ORCHESTRATION",
+         "status": "Processing op: KubernetesDeleteManifestOperation"
+        },
+        {
+         "phase": "DELETE_KUBERNETES_MANIFEST",
+         "status": "Starting delete operation..."
+        },
+        {
+         "phase": "DELETE_KUBERNETES_MANIFEST",
+         "status": "Looking up resource properties for job..."
+        },
+        {
+         "phase": "DELETE_KUBERNETES_MANIFEST",
+         "status": "Calling delete operation..."
+        },
+        {
+         "phase": "ORCHESTRATION",
+         "status": "Orchestration completed."
+        }
+       ],
+       "id": "9f177761-d12f-4144-a474-d723ac378504",
+       "resultObjects": [
+        {
+         "boundArtifacts": [],
+         "createdArtifacts": [],
+         "manifestNamesByNamespace": {
+          "default": [
+           "job fetch-3fd8d86e3d34767c",
+           "job fetch-3fec87a7de4ccac3",
+           "job fetch-3fed75fb365676d4",
+           "job fetch-3fa77b86e3708990",
+           "job fetch-3fb2a45351c07500",
+           "job fetch-3fe41d88e7797915",
+           "job fetch-3fb662979c38b2d8",
+           "job fetch-3fc30661de87cb00",
+           "job fetch-3fe5adae5ce80090",
+           "job fetch-3fee8fbe33fcb637",
+           "job fetch-3fcbb7c37c1df4d8"
+          ]
+         },
+         "manifests": []
+        }
+       ],
+       "status": {
+        "completed": true,
+        "failed": false,
+        "retryable": false
+       }
+      }
+     ],
+     "kinds": [
+      "job"
+     ],
+     "labelSelectors": {
+      "selectors": [
+       {
+        "key": "spinnakerlabel",
+        "kind": "EQUALS",
+        "values": [
+         "deljob"
+        ]
+       }
+      ]
+     },
+     "location": "default",
+     "manifestNamesByNamespaceToRefresh": {
+      "default": [
+       "job fetch-3fd8d86e3d34767c",
+       "job fetch-3fec87a7de4ccac3",
+       "job fetch-3fed75fb365676d4",
+       "job fetch-3fa77b86e3708990",
+       "job fetch-3fb2a45351c07500",
+       "job fetch-3fe41d88e7797915",
+       "job fetch-3fb662979c38b2d8",
+       "job fetch-3fc30661de87cb00",
+       "job fetch-3fe5adae5ce80090",
+       "job fetch-3fee8fbe33fcb637",
+       "job fetch-3fcbb7c37c1df4d8"
+      ]
+     },
+     "mode": "label",
+     "options": {
+      "cascading": true
+     },
+     "outputs.boundArtifacts": [],
+     "outputs.createdArtifacts": [],
+     "outputs.manifestNamesByNamespace": {
+      "default": [
+       "job fetch-3fd8d86e3d34767c",
+       "job fetch-3fec87a7de4ccac3",
+       "job fetch-3fed75fb365676d4",
+       "job fetch-3fa77b86e3708990",
+       "job fetch-3fb2a45351c07500",
+       "job fetch-3fe41d88e7797915",
+       "job fetch-3fb662979c38b2d8",
+       "job fetch-3fc30661de87cb00",
+       "job fetch-3fe5adae5ce80090",
+       "job fetch-3fee8fbe33fcb637",
+       "job fetch-3fcbb7c37c1df4d8"
+      ]
+     },
+     "outputs.manifests": [],
+     "processed.scopedManifests": [
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fb662979c38b2d8"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fee8fbe33fcb637"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fc30661de87cb00"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fed75fb365676d4"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fcbb7c37c1df4d8"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fe5adae5ce80090"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fec87a7de4ccac3"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fd8d86e3d34767c"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fa77b86e3708990"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fb2a45351c07500"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fe41d88e7797915"
+      }
+     ],
+     "refreshed.scopedManifests": [
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fb662979c38b2d8"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fee8fbe33fcb637"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fc30661de87cb00"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fed75fb365676d4"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fcbb7c37c1df4d8"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fe5adae5ce80090"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fec87a7de4ccac3"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fd8d86e3d34767c"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fa77b86e3708990"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fb2a45351c07500"
+      },
+      {
+       "account": "default",
+       "location": "default",
+       "name": "job fetch-3fe41d88e7797915"
+      }
+     ],
+     "shouldRefreshManifestNamesByNamespaceToRefresh": false
+    },
+    "endTime": 1604403730236,
+    "id": "01EP6YKYY6BBY6KF9DPZR67R3R",
+    "name": "Delete (Manifest)",
+    "outputs": {
+     "artifacts": [],
+     "manifestNamesByNamespaceToRefresh": {
+      "default": [
+       "job fetch-3fd8d86e3d34767c",
+       "job fetch-3fec87a7de4ccac3",
+       "job fetch-3fed75fb365676d4",
+       "job fetch-3fa77b86e3708990",
+       "job fetch-3fb2a45351c07500",
+       "job fetch-3fe41d88e7797915",
+       "job fetch-3fb662979c38b2d8",
+       "job fetch-3fc30661de87cb00",
+       "job fetch-3fe5adae5ce80090",
+       "job fetch-3fee8fbe33fcb637",
+       "job fetch-3fcbb7c37c1df4d8"
+      ]
+     },
+     "outputs.boundArtifacts": [],
+     "outputs.createdArtifacts": [],
+     "outputs.manifestNamesByNamespace": {
+      "default": [
+       "job fetch-3fd8d86e3d34767c",
+       "job fetch-3fec87a7de4ccac3",
+       "job fetch-3fed75fb365676d4",
+       "job fetch-3fa77b86e3708990",
+       "job fetch-3fb2a45351c07500",
+       "job fetch-3fe41d88e7797915",
+       "job fetch-3fb662979c38b2d8",
+       "job fetch-3fc30661de87cb00",
+       "job fetch-3fe5adae5ce80090",
+       "job fetch-3fee8fbe33fcb637",
+       "job fetch-3fcbb7c37c1df4d8"
+      ]
+     },
+     "outputs.manifests": [],
+     "shouldRefreshManifestNamesByNamespaceToRefresh": true
+    },
+    "refId": "1",
+    "requisiteStageRefIds": [],
+    "startTime": 1604403723330,
+    "status": "SUCCEEDED",
+    "tasks": [
+     {
+      "endTime": 1604403723501,
+      "id": "1",
+      "implementingClass": "com.netflix.spinnaker.orca.clouddriver.tasks.manifest.ResolveTargetManifestTask",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "resolveTargetManifest",
+      "stageEnd": false,
+      "stageStart": true,
+      "startTime": 1604403723390,
+      "status": "SUCCEEDED"
+     },
+     {
+      "endTime": 1604403723607,
+      "id": "2",
+      "implementingClass": "com.netflix.spinnaker.orca.clouddriver.tasks.manifest.DeleteManifestTask",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "deleteManifest",
+      "stageEnd": false,
+      "stageStart": false,
+      "startTime": 1604403723549,
+      "status": "SUCCEEDED"
+     },
+     {
+      "endTime": 1604403728740,
+      "id": "3",
+      "implementingClass": "com.netflix.spinnaker.orca.clouddriver.tasks.MonitorKatoTask",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "monitorDelete",
+      "stageEnd": false,
+      "stageStart": false,
+      "startTime": 1604403723614,
+      "status": "SUCCEEDED"
+     },
+     {
+      "endTime": 1604403728863,
+      "id": "4",
+      "implementingClass": "com.netflix.spinnaker.orca.clouddriver.tasks.manifest.PromoteManifestKatoOutputsTask",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "promoteOutputs",
+      "stageEnd": false,
+      "stageStart": false,
+      "startTime": 1604403728800,
+      "status": "SUCCEEDED"
+     },
+     {
+      "endTime": 1604403730170,
+      "id": "5",
+      "implementingClass": "com.netflix.spinnaker.orca.clouddriver.tasks.manifest.ManifestForceCacheRefreshTask",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "forceCacheRefresh",
+      "stageEnd": true,
+      "stageStart": false,
+      "startTime": 1604403728923,
+      "status": "SUCCEEDED"
+     }
+    ],
+    "type": "deleteManifest"
+   },
+   {
+    "context": {
+     "account": "default",
+     "app": "test",
+     "artifacts": [],
+     "cloudProvider": "kubernetes",
+     "deploy.account.name": "default",
+     "deploy.server.groups": {},
+     "deployedManifests": [
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe2acc4fc5d96b3"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fdf9a5700f4d1b4"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe4a6b73a3c7c04"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fd6d1c36fba52be"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fc8b17eb10b9780"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe6f7e8311e87cc"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fdc77ac5b058ece"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe1e21efff97eaf"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe25d4aa976faef"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe5d3f125f42f57"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fdd3ac5aacadd8e"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe4b67aac85e45d"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fd96acbc4422832"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe91a153a8cc315"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe6ab0db5f1631e"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fcaac8cb8972ef4"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fd0213faa7e480c"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fd235bc7eca538c"
+      }
+     ],
+     "errors": [],
+     "kato.last.task.id": {
+      "id": "009fa7fd-5ffd-4f6d-ba38-08ae60d430fe"
+     },
+     "kato.result.expected": true,
+     "kato.task.firstNotFoundRetry": -1,
+     "kato.task.lastStatus": "SUCCEEDED",
+     "kato.task.notFoundRetryCount": 0,
+     "kato.task.terminalRetryCount": 0,
+     "kato.tasks": [
+      {
+       "history": [
+        {
+         "phase": "ORCHESTRATION",
+         "status": "Initializing Orchestration Task"
+        },
+        {
+         "phase": "ORCHESTRATION",
+         "status": "Processing op: KubernetesDeleteManifestOperation"
+        },
+        {
+         "phase": "DELETE_KUBERNETES_MANIFEST",
+         "status": "Starting delete operation..."
+        },
+        {
+         "phase": "DELETE_KUBERNETES_MANIFEST",
+         "status": "Looking up resource properties for job..."
+        },
+        {
+         "phase": "DELETE_KUBERNETES_MANIFEST",
+         "status": "Calling delete operation..."
+        },
+        {
+         "phase": "ORCHESTRATION",
+         "status": "Orchestration completed."
+        }
+       ],
+       "id": "009fa7fd-5ffd-4f6d-ba38-08ae60d430fe",
+       "resultObjects": [
+        {
+         "boundArtifacts": [],
+         "createdArtifacts": [],
+         "manifestNamesByNamespace": {
+          "oes": [
+           "job fetch-3fe2acc4fc5d96b3",
+           "job fetch-3fdf9a5700f4d1b4",
+           "job fetch-3fe4a6b73a3c7c04",
+           "job fetch-3fd6d1c36fba52be",
+           "job fetch-3fc8b17eb10b9780",
+           "job fetch-3fe6f7e8311e87cc",
+           "job fetch-3fdc77ac5b058ece",
+           "job fetch-3fe1e21efff97eaf",
+           "job fetch-3fe25d4aa976faef",
+           "job fetch-3fe5d3f125f42f57",
+           "job fetch-3fdd3ac5aacadd8e",
+           "job fetch-3fe4b67aac85e45d",
+           "job fetch-3fd96acbc4422832",
+           "job fetch-3fe91a153a8cc315",
+           "job fetch-3fe6ab0db5f1631e",
+           "job fetch-3fcaac8cb8972ef4",
+           "job fetch-3fd0213faa7e480c",
+           "job fetch-3fd235bc7eca538c"
+          ]
+         },
+         "manifests": []
+        }
+       ],
+       "status": {
+        "completed": true,
+        "failed": false,
+        "retryable": false
+       }
+      }
+     ],
+     "kinds": [
+      "job"
+     ],
+     "labelSelectors": {
+      "selectors": [
+       {
+        "key": "spinnakerlabel",
+        "kind": "EQUALS",
+        "values": [
+         "deljob"
+        ]
+       }
+      ]
+     },
+     "location": "oes",
+     "manifestNamesByNamespaceToRefresh": {
+      "oes": [
+       "job fetch-3fe2acc4fc5d96b3",
+       "job fetch-3fdf9a5700f4d1b4",
+       "job fetch-3fe4a6b73a3c7c04",
+       "job fetch-3fd6d1c36fba52be",
+       "job fetch-3fc8b17eb10b9780",
+       "job fetch-3fe6f7e8311e87cc",
+       "job fetch-3fdc77ac5b058ece",
+       "job fetch-3fe1e21efff97eaf",
+       "job fetch-3fe25d4aa976faef",
+       "job fetch-3fe5d3f125f42f57",
+       "job fetch-3fdd3ac5aacadd8e",
+       "job fetch-3fe4b67aac85e45d",
+       "job fetch-3fd96acbc4422832",
+       "job fetch-3fe91a153a8cc315",
+       "job fetch-3fe6ab0db5f1631e",
+       "job fetch-3fcaac8cb8972ef4",
+       "job fetch-3fd0213faa7e480c",
+       "job fetch-3fd235bc7eca538c"
+      ]
+     },
+     "mode": "label",
+     "options": {
+      "cascading": true
+     },
+     "outputs.boundArtifacts": [],
+     "outputs.createdArtifacts": [],
+     "outputs.manifestNamesByNamespace": {
+      "oes": [
+       "job fetch-3fe2acc4fc5d96b3",
+       "job fetch-3fdf9a5700f4d1b4",
+       "job fetch-3fe4a6b73a3c7c04",
+       "job fetch-3fd6d1c36fba52be",
+       "job fetch-3fc8b17eb10b9780",
+       "job fetch-3fe6f7e8311e87cc",
+       "job fetch-3fdc77ac5b058ece",
+       "job fetch-3fe1e21efff97eaf",
+       "job fetch-3fe25d4aa976faef",
+       "job fetch-3fe5d3f125f42f57",
+       "job fetch-3fdd3ac5aacadd8e",
+       "job fetch-3fe4b67aac85e45d",
+       "job fetch-3fd96acbc4422832",
+       "job fetch-3fe91a153a8cc315",
+       "job fetch-3fe6ab0db5f1631e",
+       "job fetch-3fcaac8cb8972ef4",
+       "job fetch-3fd0213faa7e480c",
+       "job fetch-3fd235bc7eca538c"
+      ]
+     },
+     "outputs.manifests": [],
+     "processed.scopedManifests": [
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe4a6b73a3c7c04"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fd96acbc4422832"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe91a153a8cc315"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe6ab0db5f1631e"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fd6d1c36fba52be"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fd0213faa7e480c"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fc8b17eb10b9780"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe25d4aa976faef"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fd235bc7eca538c"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe2acc4fc5d96b3"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fcaac8cb8972ef4"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fdf9a5700f4d1b4"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe5d3f125f42f57"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fdc77ac5b058ece"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe1e21efff97eaf"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe4b67aac85e45d"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fdd3ac5aacadd8e"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe6f7e8311e87cc"
+      }
+     ],
+     "refreshed.scopedManifests": [
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe4a6b73a3c7c04"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fd96acbc4422832"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe91a153a8cc315"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe6ab0db5f1631e"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fd6d1c36fba52be"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fd0213faa7e480c"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fc8b17eb10b9780"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe25d4aa976faef"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fd235bc7eca538c"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe2acc4fc5d96b3"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fcaac8cb8972ef4"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fdf9a5700f4d1b4"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe5d3f125f42f57"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fdc77ac5b058ece"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe1e21efff97eaf"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe4b67aac85e45d"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fdd3ac5aacadd8e"
+      },
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe6f7e8311e87cc"
+      }
+     ],
+     "shouldRefreshManifestNamesByNamespaceToRefresh": false
+    },
+    "endTime": 1604403737548,
+    "id": "01EP6YKYY6CWTB2F77AG4230XV",
+    "name": "Delete (Manifest)",
+    "outputs": {
+     "artifacts": [],
+     "manifestNamesByNamespaceToRefresh": {
+      "oes": [
+       "job fetch-3fe2acc4fc5d96b3",
+       "job fetch-3fdf9a5700f4d1b4",
+       "job fetch-3fe4a6b73a3c7c04",
+       "job fetch-3fd6d1c36fba52be",
+       "job fetch-3fc8b17eb10b9780",
+       "job fetch-3fe6f7e8311e87cc",
+       "job fetch-3fdc77ac5b058ece",
+       "job fetch-3fe1e21efff97eaf",
+       "job fetch-3fe25d4aa976faef",
+       "job fetch-3fe5d3f125f42f57",
+       "job fetch-3fdd3ac5aacadd8e",
+       "job fetch-3fe4b67aac85e45d",
+       "job fetch-3fd96acbc4422832",
+       "job fetch-3fe91a153a8cc315",
+       "job fetch-3fe6ab0db5f1631e",
+       "job fetch-3fcaac8cb8972ef4",
+       "job fetch-3fd0213faa7e480c",
+       "job fetch-3fd235bc7eca538c"
+      ]
+     },
+     "outputs.boundArtifacts": [],
+     "outputs.createdArtifacts": [],
+     "outputs.manifestNamesByNamespace": {
+      "oes": [
+       "job fetch-3fe2acc4fc5d96b3",
+       "job fetch-3fdf9a5700f4d1b4",
+       "job fetch-3fe4a6b73a3c7c04",
+       "job fetch-3fd6d1c36fba52be",
+       "job fetch-3fc8b17eb10b9780",
+       "job fetch-3fe6f7e8311e87cc",
+       "job fetch-3fdc77ac5b058ece",
+       "job fetch-3fe1e21efff97eaf",
+       "job fetch-3fe25d4aa976faef",
+       "job fetch-3fe5d3f125f42f57",
+       "job fetch-3fdd3ac5aacadd8e",
+       "job fetch-3fe4b67aac85e45d",
+       "job fetch-3fd96acbc4422832",
+       "job fetch-3fe91a153a8cc315",
+       "job fetch-3fe6ab0db5f1631e",
+       "job fetch-3fcaac8cb8972ef4",
+       "job fetch-3fd0213faa7e480c",
+       "job fetch-3fd235bc7eca538c"
+      ]
+     },
+     "outputs.manifests": [],
+     "shouldRefreshManifestNamesByNamespaceToRefresh": true
+    },
+    "refId": "2",
+    "requisiteStageRefIds": [
+     "1"
+    ],
+    "startTime": 1604403730288,
+    "status": "SUCCEEDED",
+    "tasks": [
+     {
+      "endTime": 1604403730427,
+      "id": "1",
+      "implementingClass": "com.netflix.spinnaker.orca.clouddriver.tasks.manifest.ResolveTargetManifestTask",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "resolveTargetManifest",
+      "stageEnd": false,
+      "stageStart": true,
+      "startTime": 1604403730348,
+      "status": "SUCCEEDED"
+     },
+     {
+      "endTime": 1604403730597,
+      "id": "2",
+      "implementingClass": "com.netflix.spinnaker.orca.clouddriver.tasks.manifest.DeleteManifestTask",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "deleteManifest",
+      "stageEnd": false,
+      "stageStart": false,
+      "startTime": 1604403730487,
+      "status": "SUCCEEDED"
+     },
+     {
+      "endTime": 1604403735825,
+      "id": "3",
+      "implementingClass": "com.netflix.spinnaker.orca.clouddriver.tasks.MonitorKatoTask",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "monitorDelete",
+      "stageEnd": false,
+      "stageStart": false,
+      "startTime": 1604403730650,
+      "status": "SUCCEEDED"
+     },
+     {
+      "endTime": 1604403735946,
+      "id": "4",
+      "implementingClass": "com.netflix.spinnaker.orca.clouddriver.tasks.manifest.PromoteManifestKatoOutputsTask",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "promoteOutputs",
+      "stageEnd": false,
+      "stageStart": false,
+      "startTime": 1604403735830,
+      "status": "SUCCEEDED"
+     },
+     {
+      "endTime": 1604403737482,
+      "id": "5",
+      "implementingClass": "com.netflix.spinnaker.orca.clouddriver.tasks.manifest.ManifestForceCacheRefreshTask",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "forceCacheRefresh",
+      "stageEnd": true,
+      "stageStart": false,
+      "startTime": 1604403735998,
+      "status": "SUCCEEDED"
+     }
+    ],
+    "type": "deleteManifest"
+   }
+  ],
+  "startTime": 1604403723275,
+  "status": "SUCCEEDED",
+  "systemNotifications": [],
+  "trigger": {
+   "artifacts": [],
+   "dryRun": false,
+   "enabled": false,
+   "eventId": "1d97c3a0-e743-4a8e-87ba-efb19f60fa85",
+   "executionId": "01EP6YKYX60KHSJZB0TDAK8X20",
+   "expectedArtifacts": [],
+   "notifications": [],
+   "parameters": {},
+   "rebake": false,
+   "resolvedExpectedArtifacts": [],
+   "strategy": false,
+   "type": "manual",
+   "user": "[anonymous]"
+  },
+  "type": "PIPELINE"
+ }
+]
+[
+ {
+  "application": "test",
+  "authentication": {
+   "allowedAccounts": []
+  },
+  "buildTime": 1604403720030,
+  "canceled": false,
+  "endTime": 1604403771351,
+  "id": "01EP6YKVTXDFZDX2S4HTQ9CRT4",
+  "initialConfig": {},
+  "keepWaitingPipelines": true,
+  "limitConcurrent": true,
+  "name": "duplicate",
+  "notifications": [],
+  "origin": "unknown",
+  "pipelineConfigId": "33355a6e-72e5-4094-ad92-720660774e57",
+  "spelEvaluator": "v4",
+  "stages": [
+   {
+    "context": {
+     "account": "default",
+     "alias": "runJob",
+     "application": "test",
+     "artifacts": [
+      {
+       "customKind": false,
+       "location": "oes",
+       "metadata": {
+        "account": "default"
+       },
+       "name": "fetch-3fe6ab0db5f1631e",
+       "reference": "fetch-3fe6ab0db5f1631e",
+       "type": "kubernetes/job"
+      }
+     ],
+     "cloudProvider": "kubernetes",
+     "credentials": "default",
+     "deploy.account.name": "default",
+     "deploy.jobs": {
+      "oes": [
+       "job fetch-3fe6ab0db5f1631e"
+      ]
+     },
+     "deploy.server.groups": {},
+     "deployedManifests": [
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe6ab0db5f1631e"
+      }
+     ],
+     "errors": [],
+     "exception": {
+      "details": {
+       "error": "Not Found",
+       "errors": [
+        "Job not found (account: default, location: oes, id: job fetch-3fe6ab0db5f1631e)"
+       ],
+       "kind": "HTTP",
+       "responseBody": "{\"error\":\"Not Found\",\"message\":\"Job not found (account: default, location: oes, id: job fetch-3fe6ab0db5f1631e)\",\"status\":404,\"timestamp\":1604403771263}",
+       "status": 404,
+       "url": "http://spin-clouddriver.oes:7002/applications/test/jobs/default/oes/job%20fetch-3fe6ab0db5f1631e"
+      },
+      "exceptionType": "RetrofitError",
+      "operation": "waitOnJobCompletion",
+      "shouldRetry": false,
+      "timestamp": 1604403771267
+     },
+     "kato.last.task.id": {
+      "id": "151d61e8-8cb2-452e-8c28-91d8b70ac8f3"
+     },
+     "kato.result.expected": false,
+     "kato.task.firstNotFoundRetry": -1,
+     "kato.task.lastStatus": "SUCCEEDED",
+     "kato.task.notFoundRetryCount": 0,
+     "kato.task.terminalRetryCount": 0,
+     "kato.tasks": [
+      {
+       "history": [
+        {
+         "phase": "ORCHESTRATION",
+         "status": "Initializing Orchestration Task"
+        },
+        {
+         "phase": "ORCHESTRATION",
+         "status": "Processing op: KubernetesRunJobOperation"
+        },
+        {
+         "phase": "RUN_KUBERNETES_JOB",
+         "status": "Running Kubernetes job..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Beginning deployment of manifest..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Finding deployer for job..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Swapping out artifacts in job fetch-3fe6ab0db5f1631e from context..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Checking if all requested artifacts were bound..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Sorting manifests by priority..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Deploy order is: job fetch-3fe6ab0db5f1631e"
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Finding deployer for job..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Annotating manifest job fetch-3fe6ab0db5f1631e with artifact, relationships \u0026 moniker..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Swapping out artifacts in job fetch-3fe6ab0db5f1631e from other deployments..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Submitting manifest job fetch-3fe6ab0db5f1631e to kubernetes master..."
+        },
+        {
+         "phase": "DEPLOY_KUBERNETES_MANIFEST",
+         "status": "Deploy manifest task completed successfully."
+        },
+        {
+         "phase": "ORCHESTRATION",
+         "status": "Orchestration completed."
+        }
+       ],
+       "id": "151d61e8-8cb2-452e-8c28-91d8b70ac8f3",
+       "resultObjects": [
+        {
+         "boundArtifacts": [],
+         "createdArtifacts": [
+          {
+           "customKind": false,
+           "location": "oes",
+           "metadata": {
+            "account": "default"
+           },
+           "name": "fetch-3fe6ab0db5f1631e",
+           "reference": "fetch-3fe6ab0db5f1631e",
+           "type": "kubernetes/job"
+          }
+         ],
+         "deployedNamesByLocation": {
+          "oes": [
+           "job fetch-3fe6ab0db5f1631e"
+          ]
+         },
+         "manifestNamesByNamespace": {
+          "oes": [
+           "job fetch-3fe6ab0db5f1631e"
+          ]
+         },
+         "manifests": [
+          {
+           "apiVersion": "batch/v1",
+           "kind": "Job",
+           "metadata": {
+            "annotations": {
+             "artifact.spinnaker.io/location": "oes",
+             "artifact.spinnaker.io/name": "fetch-3fe6ab0db5f1631e",
+             "artifact.spinnaker.io/type": "kubernetes/job",
+             "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"batch/v1\",\"kind\":\"Job\",\"metadata\":{\"annotations\":{\"artifact.spinnaker.io/location\":\"oes\",\"artifact.spinnaker.io/name\":\"fetch-3fe6ab0db5f1631e\",\"artifact.spinnaker.io/type\":\"kubernetes/job\",\"moniker.spinnaker.io/application\":\"test\",\"moniker.spinnaker.io/cluster\":\"job fetch-3fe6ab0db5f1631e\"},\"labels\":{\"app.kubernetes.io/managed-by\":\"spinnaker\",\"app.kubernetes.io/name\":\"test\",\"spinnakerlabel\":\"deljob\"},\"name\":\"fetch-3fe6ab0db5f1631e\",\"namespace\":\"oes\"},\"spec\":{\"backoffLimit\":2,\"template\":{\"spec\":{\"containers\":[{\"args\":[\"echo \\\"mahesh\\\"\"],\"command\":[\"/bin/sh\",\"-x\",\"-c\"],\"image\":\"opsmxdev/apline-with-curl\",\"name\":\"fetch\"}],\"restartPolicy\":\"Never\"}}}}\n",
+             "moniker.spinnaker.io/application": "test",
+             "moniker.spinnaker.io/cluster": "job fetch-3fe6ab0db5f1631e"
+            },
+            "creationTimestamp": "2020-11-03T11:42:00Z",
+            "labels": {
+             "app.kubernetes.io/managed-by": "spinnaker",
+             "app.kubernetes.io/name": "test",
+             "spinnakerlabel": "deljob"
+            },
+            "name": "fetch-3fe6ab0db5f1631e",
+            "namespace": "oes",
+            "resourceVersion": "111959",
+            "selfLink": "/apis/batch/v1/namespaces/oes/jobs/fetch-3fe6ab0db5f1631e",
+            "uid": "94159dfa-6ca6-4c80-a2fb-dfc1880f0a6d"
+           },
+           "spec": {
+            "backoffLimit": 2,
+            "completions": 1,
+            "parallelism": 1,
+            "selector": {
+             "matchLabels": {
+              "controller-uid": "94159dfa-6ca6-4c80-a2fb-dfc1880f0a6d"
+             }
+            },
+            "template": {
+             "metadata": {
+              "labels": {
+               "controller-uid": "94159dfa-6ca6-4c80-a2fb-dfc1880f0a6d",
+               "job-name": "fetch-3fe6ab0db5f1631e"
+              }
+             },
+             "spec": {
+              "containers": [
+               {
+                "args": [
+                 "echo \"mahesh\""
+                ],
+                "command": [
+                 "/bin/sh",
+                 "-x",
+                 "-c"
+                ],
+                "image": "opsmxdev/apline-with-curl",
+                "imagePullPolicy": "Always",
+                "name": "fetch",
+                "resources": {},
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File"
+               }
+              ],
+              "dnsPolicy": "ClusterFirst",
+              "restartPolicy": "Never",
+              "schedulerName": "default-scheduler",
+              "securityContext": {},
+              "terminationGracePeriodSeconds": 30
+             }
+            }
+           },
+           "status": {}
+          }
+         ]
+        }
+       ],
+       "status": {
+        "completed": true,
+        "failed": false,
+        "retryable": false
+       }
+      }
+     ],
+     "manifest": {
+      "apiVersion": "batch/v1",
+      "kind": "Job",
+      "metadata": {
+       "labels": {
+        "spinnakerlabel": "deljob"
+       },
+       "name": "fetch",
+       "namespace": "oes"
+      },
+      "spec": {
+       "backoffLimit": 2,
+       "template": {
+        "spec": {
+         "containers": [
+          {
+           "args": [
+            "echo \"mahesh\""
+           ],
+           "command": [
+            "/bin/sh",
+            "-x",
+            "-c"
+           ],
+           "image": "opsmxdev/apline-with-curl",
+           "name": "fetch"
+          }
+         ],
+         "restartPolicy": "Never"
+        }
+       }
+      }
+     },
+     "manifestNamesByNamespaceToRefresh": {
+      "oes": [
+       "job fetch-3fe6ab0db5f1631e"
+      ]
+     },
+     "notification.type": "runjob",
+     "outputs.boundArtifacts": [],
+     "outputs.createdArtifacts": [
+      {
+       "customKind": false,
+       "location": "oes",
+       "metadata": {
+        "account": "default"
+       },
+       "name": "fetch-3fe6ab0db5f1631e",
+       "reference": "fetch-3fe6ab0db5f1631e",
+       "type": "kubernetes/job"
+      }
+     ],
+     "outputs.manifestNamesByNamespace": {
+      "oes": [
+       "job fetch-3fe6ab0db5f1631e"
+      ]
+     },
+     "outputs.manifests": [
+      {
+       "apiVersion": "batch/v1",
+       "kind": "Job",
+       "metadata": {
+        "annotations": {
+         "artifact.spinnaker.io/location": "oes",
+         "artifact.spinnaker.io/name": "fetch-3fe6ab0db5f1631e",
+         "artifact.spinnaker.io/type": "kubernetes/job",
+         "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"batch/v1\",\"kind\":\"Job\",\"metadata\":{\"annotations\":{\"artifact.spinnaker.io/location\":\"oes\",\"artifact.spinnaker.io/name\":\"fetch-3fe6ab0db5f1631e\",\"artifact.spinnaker.io/type\":\"kubernetes/job\",\"moniker.spinnaker.io/application\":\"test\",\"moniker.spinnaker.io/cluster\":\"job fetch-3fe6ab0db5f1631e\"},\"labels\":{\"app.kubernetes.io/managed-by\":\"spinnaker\",\"app.kubernetes.io/name\":\"test\",\"spinnakerlabel\":\"deljob\"},\"name\":\"fetch-3fe6ab0db5f1631e\",\"namespace\":\"oes\"},\"spec\":{\"backoffLimit\":2,\"template\":{\"spec\":{\"containers\":[{\"args\":[\"echo \\\"mahesh\\\"\"],\"command\":[\"/bin/sh\",\"-x\",\"-c\"],\"image\":\"opsmxdev/apline-with-curl\",\"name\":\"fetch\"}],\"restartPolicy\":\"Never\"}}}}\n",
+         "moniker.spinnaker.io/application": "test",
+         "moniker.spinnaker.io/cluster": "job fetch-3fe6ab0db5f1631e"
+        },
+        "creationTimestamp": "2020-11-03T11:42:00Z",
+        "labels": {
+         "app.kubernetes.io/managed-by": "spinnaker",
+         "app.kubernetes.io/name": "test",
+         "spinnakerlabel": "deljob"
+        },
+        "name": "fetch-3fe6ab0db5f1631e",
+        "namespace": "oes",
+        "resourceVersion": "111959",
+        "selfLink": "/apis/batch/v1/namespaces/oes/jobs/fetch-3fe6ab0db5f1631e",
+        "uid": "94159dfa-6ca6-4c80-a2fb-dfc1880f0a6d"
+       },
+       "spec": {
+        "backoffLimit": 2,
+        "completions": 1,
+        "parallelism": 1,
+        "selector": {
+         "matchLabels": {
+          "controller-uid": "94159dfa-6ca6-4c80-a2fb-dfc1880f0a6d"
+         }
+        },
+        "template": {
+         "metadata": {
+          "labels": {
+           "controller-uid": "94159dfa-6ca6-4c80-a2fb-dfc1880f0a6d",
+           "job-name": "fetch-3fe6ab0db5f1631e"
+          }
+         },
+         "spec": {
+          "containers": [
+           {
+            "args": [
+             "echo \"mahesh\""
+            ],
+            "command": [
+             "/bin/sh",
+             "-x",
+             "-c"
+            ],
+            "image": "opsmxdev/apline-with-curl",
+            "imagePullPolicy": "Always",
+            "name": "fetch",
+            "resources": {},
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File"
+           }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "restartPolicy": "Never",
+          "schedulerName": "default-scheduler",
+          "securityContext": {},
+          "terminationGracePeriodSeconds": 30
+         }
+        }
+       },
+       "status": {}
+      }
+     ],
+     "processed.scopedManifests": [
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe6ab0db5f1631e"
+      }
+     ],
+     "refreshed.scopedManifests": [
+      {
+       "account": "default",
+       "location": "oes",
+       "name": "job fetch-3fe6ab0db5f1631e"
+      }
+     ],
+     "shouldRefreshManifestNamesByNamespaceToRefresh": false,
+     "source": "text"
+    },
+    "endTime": 1604403771290,
+    "id": "01EP6YKVTYC13VDXG551THMTSG",
+    "name": "Run Job (Manifest)",
+    "outputs": {
+     "artifacts": [
+      {
+       "customKind": false,
+       "location": "oes",
+       "metadata": {
+        "account": "default"
+       },
+       "name": "fetch-3fe6ab0db5f1631e",
+       "reference": "fetch-3fe6ab0db5f1631e",
+       "type": "kubernetes/job"
+      }
+     ],
+     "manifestNamesByNamespaceToRefresh": {
+      "oes": [
+       "job fetch-3fe6ab0db5f1631e"
+      ]
+     },
+     "outputs.boundArtifacts": [],
+     "outputs.createdArtifacts": [
+      {
+       "customKind": false,
+       "location": "oes",
+       "metadata": {
+        "account": "default"
+       },
+       "name": "fetch-3fe6ab0db5f1631e",
+       "reference": "fetch-3fe6ab0db5f1631e",
+       "type": "kubernetes/job"
+      }
+     ],
+     "outputs.manifestNamesByNamespace": {
+      "oes": [
+       "job fetch-3fe6ab0db5f1631e"
+      ]
+     },
+     "outputs.manifests": [
+      {
+       "apiVersion": "batch/v1",
+       "kind": "Job",
+       "metadata": {
+        "annotations": {
+         "artifact.spinnaker.io/location": "oes",
+         "artifact.spinnaker.io/name": "fetch-3fe6ab0db5f1631e",
+         "artifact.spinnaker.io/type": "kubernetes/job",
+         "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"batch/v1\",\"kind\":\"Job\",\"metadata\":{\"annotations\":{\"artifact.spinnaker.io/location\":\"oes\",\"artifact.spinnaker.io/name\":\"fetch-3fe6ab0db5f1631e\",\"artifact.spinnaker.io/type\":\"kubernetes/job\",\"moniker.spinnaker.io/application\":\"test\",\"moniker.spinnaker.io/cluster\":\"job fetch-3fe6ab0db5f1631e\"},\"labels\":{\"app.kubernetes.io/managed-by\":\"spinnaker\",\"app.kubernetes.io/name\":\"test\",\"spinnakerlabel\":\"deljob\"},\"name\":\"fetch-3fe6ab0db5f1631e\",\"namespace\":\"oes\"},\"spec\":{\"backoffLimit\":2,\"template\":{\"spec\":{\"containers\":[{\"args\":[\"echo \\\"mahesh\\\"\"],\"command\":[\"/bin/sh\",\"-x\",\"-c\"],\"image\":\"opsmxdev/apline-with-curl\",\"name\":\"fetch\"}],\"restartPolicy\":\"Never\"}}}}\n",
+         "moniker.spinnaker.io/application": "test",
+         "moniker.spinnaker.io/cluster": "job fetch-3fe6ab0db5f1631e"
+        },
+        "creationTimestamp": "2020-11-03T11:42:00Z",
+        "labels": {
+         "app.kubernetes.io/managed-by": "spinnaker",
+         "app.kubernetes.io/name": "test",
+         "spinnakerlabel": "deljob"
+        },
+        "name": "fetch-3fe6ab0db5f1631e",
+        "namespace": "oes",
+        "resourceVersion": "111959",
+        "selfLink": "/apis/batch/v1/namespaces/oes/jobs/fetch-3fe6ab0db5f1631e",
+        "uid": "94159dfa-6ca6-4c80-a2fb-dfc1880f0a6d"
+       },
+       "spec": {
+        "backoffLimit": 2,
+        "completions": 1,
+        "parallelism": 1,
+        "selector": {
+         "matchLabels": {
+          "controller-uid": "94159dfa-6ca6-4c80-a2fb-dfc1880f0a6d"
+         }
+        },
+        "template": {
+         "metadata": {
+          "labels": {
+           "controller-uid": "94159dfa-6ca6-4c80-a2fb-dfc1880f0a6d",
+           "job-name": "fetch-3fe6ab0db5f1631e"
+          }
+         },
+         "spec": {
+          "containers": [
+           {
+            "args": [
+             "echo \"mahesh\""
+            ],
+            "command": [
+             "/bin/sh",
+             "-x",
+             "-c"
+            ],
+            "image": "opsmxdev/apline-with-curl",
+            "imagePullPolicy": "Always",
+            "name": "fetch",
+            "resources": {},
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File"
+           }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "restartPolicy": "Never",
+          "schedulerName": "default-scheduler",
+          "securityContext": {},
+          "terminationGracePeriodSeconds": 30
+         }
+        }
+       },
+       "status": {}
+      }
+     ],
+     "shouldRefreshManifestNamesByNamespaceToRefresh": true
+    },
+    "refId": "1",
+    "requisiteStageRefIds": [],
+    "startTime": 1604403720142,
+    "status": "TERMINAL",
+    "tasks": [
+     {
+      "endTime": 1604403720311,
+      "id": "1",
+      "implementingClass": "com.netflix.spinnaker.orca.clouddriver.tasks.job.RunJobTask",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "runJob",
+      "stageEnd": false,
+      "stageStart": true,
+      "startTime": 1604403720194,
+      "status": "SUCCEEDED"
+     },
+     {
+      "endTime": 1604403725502,
+      "id": "2",
+      "implementingClass": "com.netflix.spinnaker.orca.clouddriver.tasks.job.MonitorJobTask",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "monitorDeploy",
+      "stageEnd": false,
+      "stageStart": false,
+      "startTime": 1604403720316,
+      "status": "SUCCEEDED"
+     },
+     {
+      "endTime": 1604403725664,
+      "id": "3",
+      "implementingClass": "com.netflix.spinnaker.orca.clouddriver.tasks.manifest.PromoteManifestKatoOutputsTask",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "promoteOutputs",
+      "stageEnd": false,
+      "stageStart": false,
+      "startTime": 1604403725557,
+      "status": "SUCCEEDED"
+     },
+     {
+      "endTime": 1604403746127,
+      "id": "4",
+      "implementingClass": "com.netflix.spinnaker.orca.clouddriver.tasks.manifest.ManifestForceCacheRefreshTask",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "forceCacheRefresh",
+      "stageEnd": false,
+      "stageStart": false,
+      "startTime": 1604403725718,
+      "status": "SUCCEEDED"
+     },
+     {
+      "endTime": 1604403771284,
+      "id": "5",
+      "implementingClass": "com.netflix.spinnaker.orca.clouddriver.tasks.job.WaitOnJobCompletion",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "waitOnJobCompletion",
+      "stageEnd": true,
+      "stageStart": false,
+      "startTime": 1604403746130,
+      "status": "TERMINAL"
+     }
+    ],
+    "type": "runJobManifest"
+   }
+  ],
+  "startTime": 1604403720092,
+  "status": "TERMINAL",
+  "systemNotifications": [],
+  "trigger": {
+   "artifacts": [],
+   "cronExpression": "0 0/1 * 1/1 * ? *",
+   "dryRun": false,
+   "enabled": true,
+   "eventId": "7a488fcb-d9a7-48c9-ae61-d03b16ba97b6",
+   "expectedArtifacts": [],
+   "id": "7628c8c2-838a-3873-b54c-b5cfe88e9f75",
+   "notifications": [],
+   "parameters": {},
+   "rebake": false,
+   "resolvedExpectedArtifacts": [],
+   "strategy": false,
+   "type": "cron",
+   "user": "[anonymous]"
+  },
+  "type": "PIPELINE"
+ }
+]
+[
+ {
+  "application": "arjunapp",
+  "authentication": {
+   "allowedAccounts": [
+    "dockerhub",
+    "default"
+   ],
+   "user": "anonymous"
+  },
+  "buildTime": 1604384921315,
+  "canceled": true,
+  "canceledBy": "anonymous",
+  "endTime": 1604384937074,
+  "id": "01EP6CP5NZ6N5FNBZSCQ7D9T7S",
+  "initialConfig": {},
+  "keepWaitingPipelines": false,
+  "limitConcurrent": true,
+  "name": "Arjunpipeline",
+  "notifications": [],
+  "origin": "api",
+  "pipelineConfigId": "0813b761-7563-44c0-916d-ed6d608bbe34",
+  "spelEvaluator": "v4",
+  "stages": [
+   {
+    "context": {
+     "failPipeline": true,
+     "judgmentInputs": [],
+     "judgmentStatus": "",
+     "lastModifiedBy": "anonymous",
+     "notifications": []
+    },
+    "endTime": 1604384937010,
+    "id": "01EP6CP5Q3259A469TRVN7NYEM",
+    "lastModified": {
+     "allowedAccounts": [
+      "dockerhub",
+      "default"
+     ],
+     "lastModifiedTime": 1604384924835,
+     "user": "anonymous"
+    },
+    "name": "Manual Judgment",
+    "outputs": {},
+    "refId": "1",
+    "requisiteStageRefIds": [],
+    "startTime": 1604384921453,
+    "status": "CANCELED",
+    "tasks": [
+     {
+      "endTime": 1604384936913,
+      "id": "1",
+      "implementingClass": "com.netflix.spinnaker.orca.echo.pipeline.ManualJudgmentStage.WaitForManualJudgmentTask",
+      "loopEnd": false,
+      "loopStart": false,
+      "name": "waitForJudgment",
+      "stageEnd": true,
+      "stageStart": true,
+      "startTime": 1604384921489,
+      "status": "CANCELED"
+     }
+    ],
+    "type": "manualJudgment"
+   }
+  ],
+  "startTime": 1604384921373,
+  "status": "CANCELED",
+  "systemNotifications": [],
+  "trigger": {
+   "artifacts": [],
+   "dryRun": false,
+   "enabled": false,
+   "eventId": "07214b44-0943-40f3-bf86-5771b5a2a5e7",
+   "executionId": "01EP6CP5NZ6N5FNBZSCQ7D9T7S",
+   "expectedArtifacts": [],
+   "notifications": [],
+   "parameters": {},
+   "rebake": false,
+   "resolvedExpectedArtifacts": [],
+   "strategy": false,
+   "type": "manual",
+   "user": "[anonymous]"
+  },
+  "type": "PIPELINE"
+ }
+]
